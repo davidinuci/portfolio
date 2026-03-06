@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Lee — Product Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">David Lee</a>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">UI/UX</a></li>
+        <li><a href="#work">Industrial Design</a></li>
+        <li><a href="#" target="_blank">Resume</a></li>
+        <li><a href="#contact" class="nav__cta">Contact</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="about">
+    <div class="hero__inner container">
+      <div class="hero__text">
+        <p class="hero__tag">Product Designer</p>
+        <h1 class="hero__headline">I'm a product designer who bridges pragmatic design to emotional connection.</h1>
+        <p class="hero__sub">Hybrid background spanning UX, engineering communication, and business strategy — I design for people and build for impact.</p>
+        <div class="hero__actions">
+          <a href="#work" class="btn btn--primary">View My Work</a>
+          <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <div class="hero__img-wrap">
+          <div class="hero__img-placeholder" aria-hidden="true">DL</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values">
+    <div class="container">
+      <p class="section-label">What I Bring</p>
+      <div class="values__grid">
+        <div class="values__card">
+          <div class="values__icon">&#9881;</div>
+          <h3>Tech Savvy</h3>
+          <p>Fluent in modern design tools and familiar with front-end development — closing the gap between design and engineering.</p>
+        </div>
+        <div class="values__card">
+          <div class="values__icon">&#128202;</div>
+          <h3>Business Acumen</h3>
+          <p>Design decisions grounded in business goals, user data, and measurable outcomes.</p>
+        </div>
+        <div class="values__card">
+          <div class="values__icon">&#129309;</div>
+          <h3>Customer Relationship Management</h3>
+          <p>Empathy-driven design process with a focus on long-term user satisfaction and trust.</p>
+        </div>
+        <div class="values__card">
+          <div class="values__icon">&#128218;</div>
+          <h3>Lifelong Learning</h3>
+          <p>Constantly evolving — staying current with industry trends, methods, and emerging technologies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="work" id="work">
+    <div class="container">
+      <p class="section-label">Selected Work</p>
+      <h2 class="section-title">Projects</h2>
+      <div class="work__grid">
+
+        <article class="project-card">
+          <div class="project-card__img project-card__img--1"></div>
+          <div class="project-card__body">
+            <span class="project-card__tag">Enterprise Desktop Software</span>
+            <h3>Remote Work Virtual Office</h3>
+            <p>Designing desktop and web applications to help remote teams stay connected, productive, and aligned in a virtual environment.</p>
+            <a href="#" class="link-arrow">View Project &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__img project-card__img--2"></div>
+          <div class="project-card__body">
+            <span class="project-card__tag">Product Design</span>
+            <h3>EdisonFuture EV Design</h3>
+            <p>User-centered electric vehicle design integrating autonomous driving patents and a seamless human-machine interface.</p>
+            <a href="#" class="link-arrow">View Project &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__img project-card__img--3"></div>
+          <div class="project-card__body">
+            <span class="project-card__tag">UX Design</span>
+            <h3>Safe &amp; Sound</h3>
+            <p>A drive-in festival experience concept designed to address safety concerns and reimagine live events during the pandemic era.</p>
+            <a href="#" class="link-arrow">View Project &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__img project-card__img--4"></div>
+          <div class="project-card__body">
+            <span class="project-card__tag">Web Design</span>
+            <h3>Non-Profit Website Redesign</h3>
+            <p>Enhanced visual design and legibility for Much Love, a non-profit organization, improving accessibility and user engagement.</p>
+            <a href="#" class="link-arrow">View Project &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__text">
+        <p class="section-label">Say Hello</p>
+        <h2 class="section-title">Let's work together.</h2>
+        <p>Have a project in mind or just want to chat? I'd love to hear from you.</p>
+        <a href="mailto:davylee5@gmail.com" class="contact__email">davylee5@gmail.com</a>
+        <div class="contact__socials">
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">Twitter</a>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <form class="contact__form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Send Message</button>
+        <p class="form-success" id="form-success">Thanks! I'll be in touch soon.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">David Lee</span>
+        <p>Product designer bridging pragmatic design to emotional connection. Based in the US.</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="#about">About</a>
+        <a href="#work">UI/UX</a>
+        <a href="#work">Industrial Design</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer__socials">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Twitter</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 David Lee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

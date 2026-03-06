@@ -1,0 +1,51 @@
+// Mobile nav toggle
+const burger = document.querySelector('.nav__burger');
+const navLinks = document.querySelector('.nav__links');
+
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+// Close nav on link click
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  });
+});
+
+// Contact form
+function handleSubmit(e) {
+  e.preventDefault();
+  const success = document.getElementById('form-success');
+  success.classList.add('visible');
+  e.target.reset();
+  setTimeout(() => success.classList.remove('visible'), 5000);
+}
+
+// Scroll-in animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.values__card, .project-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.values__card, .project-card').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 0.08}s`;
+  });
+});
+
+// Add visible class styles via JS
+const style = document.createElement('style');
+style.textContent = '.values__card.visible, .project-card.visible { opacity: 1 !important; transform: translateY(0) !important; }';
+document.head.appendChild(style);
