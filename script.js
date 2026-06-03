@@ -18,6 +18,11 @@ navLinks.querySelectorAll('a').forEach(link => {
 const FORMSPREE = false;
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
 
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.contact__form');
+  if (form) form.style.display = FORMSPREE ? '' : 'none';
+});
+
 function handleSubmit(e) {
   e.preventDefault();
   const success = document.getElementById('form-success');
