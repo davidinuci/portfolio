@@ -14,12 +14,31 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 
 // Contact form
+// To enable real email delivery: set FORMSPREE to true and paste your endpoint
+const FORMSPREE = false;
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
 function handleSubmit(e) {
   e.preventDefault();
   const success = document.getElementById('form-success');
-  success.classList.add('visible');
-  e.target.reset();
-  setTimeout(() => success.classList.remove('visible'), 5000);
+
+  if (FORMSPREE) {
+    fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      body: new FormData(e.target),
+      headers: { Accept: 'application/json' },
+    }).then(res => {
+      if (res.ok) {
+        success.classList.add('visible');
+        e.target.reset();
+        setTimeout(() => success.classList.remove('visible'), 5000);
+      }
+    });
+  } else {
+    success.classList.add('visible');
+    e.target.reset();
+    setTimeout(() => success.classList.remove('visible'), 5000);
+  }
 }
 
 // Scroll-in animation
