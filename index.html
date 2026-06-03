@@ -170,7 +170,7 @@
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <div class="container contact__inner">
+    <div class="container contact__inner contact__inner--solo">
       <div class="contact__text">
         <p class="section-label">Say Hello</p>
         <h2 class="section-title">Let's work together.</h2>
@@ -182,7 +182,7 @@
           <a href="#" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
-      <form class="contact__form" onsubmit="handleSubmit(event)">
+      <form class="contact__form" onsubmit="handleSubmit(event)" style="display:none">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your name" required />
