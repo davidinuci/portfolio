@@ -253,6 +253,18 @@ h1, h2, h3 {
   background: #fff;
 }
 
+.about-bio--page {
+  padding-top: 7rem;
+  background: #fafafa;
+}
+
+.about-bio__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
 .about-bio__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
