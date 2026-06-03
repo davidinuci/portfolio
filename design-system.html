@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jitsu Design System — David Lee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <script src="auth.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">David Lee</a>
+      <ul class="nav__links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#work">UI/UX</a></li>
+        <li><a href="index.html#work">Industrial Design</a></li>
+        <li><a href="#" target="_blank">Resume</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Contact</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CASE STUDY HERO -->
+  <section class="cs-hero">
+    <div class="container cs-hero__inner">
+      <a href="index.html#work" class="cs-back">&larr; Back to Projects</a>
+      <span class="project-card__tag">Design System</span>
+      <h1 class="cs-hero__title">Jitsu Design System</h1>
+      <p class="cs-hero__sub">Building a scalable, multi-product design system on Material 3 — a shared component library and token architecture across Figma and Claude Design that survived a full company rebrand without touching a single component.</p>
+      <div class="cs-meta">
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Role</span>
+          <span class="cs-meta__value">Lead Designer</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Timeline</span>
+          <span class="cs-meta__value">Ongoing</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Platform</span>
+          <span class="cs-meta__value">Figma · Claude Design</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Tools</span>
+          <span class="cs-meta__value">Figma, Material 3, Claude Code</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="cs-cover">
+    <div class="cs-cover__img cs-cover__img--design-system"></div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Overview</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Challenge</h2>
+        <p>As Jitsu grew from its Axlehire roots, multiple products were being designed simultaneously with no shared design language. Components were duplicated across files, color values were hardcoded at the component level, and every product had its own slightly different version of the same button. At the same time, the company was going through a full rebrand.</p>
+        <p>Without a proper system in place, that rebrand would mean manually hunting through every fill in every product file. The challenge was to build a system robust enough to absorb a company identity change — and flexible enough to give each product its own visual character within a shared foundation.</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 2.5rem;">
+      <div class="cs-img-block cs-img-block--research">
+        <p class="cs-img-block__caption">Pre-system audit — duplicated components, inconsistent spacing, and no shared token layer across product Figma files.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESEARCH -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Discovery</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Auditing the Existing State</h2>
+        <p>Before designing anything new, I audited every active Figma file to map what existed and where the inconsistencies were coming from. The findings made the problem concrete:</p>
+        <ul class="cs-list">
+          <li>The same button component existed in multiple unlinked versions across product files — no single source of truth.</li>
+          <li>Color values were applied directly to fills with no semantic naming, making a brand color change an impossible manual task.</li>
+          <li>Spacing and corner radius were applied freehand, with no shared tokens to enforce consistency across products.</li>
+          <li>The Axlehire brand (purple) had been applied inconsistently as the company transitioned toward the Jitsu identity.</li>
+        </ul>
+        <div class="cs-callout">
+          <p>"If we rebrand without a system, we're manually touching thousands of fills across every screen in every file."</p>
+          <span>— Observation during pre-system audit</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- PROCESS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Process</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Building the Token Architecture</h2>
+        <p>I chose Material 3 as the design language foundation — not for its aesthetics, but because it provided a battle-tested, accessible component system I could adapt rather than invent. That freed me to focus on the token architecture, which was the actual design problem.</p>
+        <p>The system uses a three-tier token model. Components only reference Tier 3 tokens, which alias Tier 2 semantic tokens, which map to raw Tier 1 primitive values. Swapping a product theme means changing only the Tier 2 → Tier 1 mapping — no component work needed.</p>
+        <ul class="cs-list">
+          <li><strong>Tier 1 — Primitives (279 variables):</strong> Raw color values organized as tonal palettes. Never referenced directly by components.</li>
+          <li><strong>Tier 2 — Semantic / JU layer (139 variables):</strong> Purpose-based aliases — primary, surface, outline, state layers — grouped to match Material 3 color roles across Brand, Schemes, Surfaces, Extended Colors, Spacing, Radius, and State Layers.</li>
+          <li><strong>Tier 3 — Component tokens (10 variables):</strong> Component-scoped references that always point to the semantic layer, keeping components fully theme-agnostic.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WIREFRAMES / TOKEN DIAGRAM -->
+  <div class="container">
+    <div class="cs-img-block cs-img-block--wireframes">
+      <p class="cs-img-block__caption">Figma Variables panel — JU collection with 139 semantic tokens across 8 groups, all referencing the Primitives collection of 279 raw tonal values.</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- SOLUTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Solution</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Three Modes, One Library</h2>
+        <p>Rather than building separate component libraries per product, the system uses Figma Variable Modes — one collection, three themes. Switching a frame's brand is a single click; every component inside re-colors automatically with no manual edits.</p>
+        <p>The rebrand from Axlehire to Jitsu was the real test. I generated Jitsu's green tonal palette, added a new Variable Mode, and mapped the semantic tokens to the new values. Every product screen updated instantly. Not a single component was opened or edited.</p>
+      </div>
+    </div>
+    <div class="container cs-features">
+      <div class="cs-feature">
+        <div class="cs-feature__number">AH</div>
+        <h3>Axlehire — Legacy Mode</h3>
+        <p>The original purple brand preserved as a Variable Mode. Still active in the system for reference — not deleted, just superseded by the Jitsu theme.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">☀</div>
+        <h3>Jitsu Light</h3>
+        <p>Green as the primary color role, mapped from the Jitsu tonal palette. Used across the Warehouse Dashboard, Outbound App, and all future Jitsu products.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">◑</div>
+        <h3>Jitsu Dark</h3>
+        <p>The same green palette adapted for dark surfaces — lighter primary tones for contrast, deeper container fills for elevation — generated from the same key color.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL DESIGN IMAGE -->
+  <div class="container cs-final-images">
+    <div class="cs-img-block cs-img-block--final cs-img-block--tall">
+      <p class="cs-img-block__caption">Figma Variables — JU semantic layer with Light, Dark, and AH modes. Green tonal values for Jitsu, purple for the legacy Axlehire theme.</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- CLAUDE CODE WORKFLOW -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Workflow</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Scaling a Solo Effort</h2>
+        <p>Design systems are typically built by dedicated teams. I was the sole designer responsible for the system while simultaneously delivering product work across multiple active projects. To match the output expected of a larger team, I integrated Claude Code into my Figma workflow via the Figma MCP.</p>
+        <ul class="cs-list">
+          <li>Automated component variant creation across states — default, hover, pressed, disabled, focused — for the entire component library.</li>
+          <li>Used Claude Code to audit token usage across product files and surface any components still using hardcoded fills.</li>
+          <li>Generated design token JSON exports structured to match the Figma variable naming exactly, ready for developer handoff.</li>
+          <li>Ran consistency checks on spacing and radius usage before each release to catch drift before it reached production.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESULTS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Results</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Impact</h2>
+        <p>The system is actively used across Jitsu's product suite. The rebrand validated the architecture — and the workflow proved that a single designer with the right tooling can sustain what normally requires a dedicated systems team.</p>
+      </div>
+    </div>
+    <div class="container cs-stats">
+      <div class="cs-stat">
+        <span class="cs-stat__number">418</span>
+        <p>Total Figma variables across Primitives and semantic layers</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">3</span>
+        <p>Product themes supported from a single shared component library</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">0</span>
+        <p>Components manually edited during the Axlehire → Jitsu rebrand</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- REFLECTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Reflection</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">What I Learned</h2>
+        <p>The most important decision in this project wasn't visual — it was structural. Investing in a proper token hierarchy before building any components meant the system could absorb a full company rebrand without rework. The short-term cost of that architecture paid back immediately when the rebrand happened.</p>
+        <p>Working solo on a system that typically requires a team also changed how I think about design tooling. Claude Code didn't replace design judgment — it eliminated the high-volume mechanical work that would have consumed the time needed for judgment. The best use of automation is always on tasks with clear rules and large repetition, freeing attention for the decisions that don't have clear rules.</p>
+        <p>Going forward, I'd like to formalize the Claude Design side of the system to more tightly mirror the Figma variable structure, and build a living documentation page that non-designers on the team can reference without needing to open Figma.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <section class="cs-next">
+    <div class="container cs-next__inner">
+      <p class="section-label">Next Project</p>
+      <h2>Outbound App</h2>
+      <a href="outbound-app.html" class="btn btn--primary">View Project &rarr;</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">David Lee</span>
+        <p>Product designer bridging pragmatic design to emotional connection. Based in the US.</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#work">UI/UX</a>
+        <a href="index.html#work">Industrial Design</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="footer__socials">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Twitter</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 David Lee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

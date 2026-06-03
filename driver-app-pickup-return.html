@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Driver App: Pickup Return — David Lee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <script src="auth.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">David Lee</a>
+      <ul class="nav__links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#work">UI/UX</a></li>
+        <li><a href="index.html#work">Industrial Design</a></li>
+        <li><a href="#" target="_blank">Resume</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Contact</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CASE STUDY HERO -->
+  <section class="cs-hero">
+    <div class="container cs-hero__inner">
+      <a href="index.html#work" class="cs-back">&larr; Back to Projects</a>
+      <span class="project-card__tag">Mobile App Design</span>
+      <h1 class="cs-hero__title">Driver App: Pickup Return</h1>
+      <p class="cs-hero__sub">Extending Jitsu's driver app to collect Nespresso's used coffee pod bags at the point of delivery — turning every reorder into a recycling event without adding a new stop, a new app, or re-training drivers.</p>
+      <div class="cs-meta">
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Role</span>
+          <span class="cs-meta__value">Product Designer</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Client</span>
+          <span class="cs-meta__value">Nespresso × Jitsu</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Platform</span>
+          <span class="cs-meta__value">iOS Mobile App</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Shipped</span>
+          <span class="cs-meta__value">July 2024</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="cs-cover">
+    <div class="cs-cover__img cs-cover__img--driver"></div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Overview</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Challenge</h2>
+        <p>Nespresso needed a way to collect used aluminum pod bags from customers at scale, but adding a dedicated pickup route was logistically impractical. The opportunity was already on the road: when a Nespresso customer reorders pods, a Jitsu driver is already headed to their address for the delivery. That same stop could close the recycling loop — deliver new pods, collect the old bag.</p>
+        <p>The existing driver app only handled outbound deliveries. There was no concept of collecting something from a customer at a drop-off stop, no conditional stop logic, and no flow for logging a physical handoff that required a verifiable chain of custody. The goal was to add this workflow to an app drivers used every day without disrupting the patterns they already knew — and without ever blocking a driver from completing their delivery if the customer wasn't ready.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESEARCH -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Research</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Understanding the Context</h2>
+        <p>Before designing anything new, I spent time reviewing the existing driver app's flows — particularly the inbound scan and route confirmation patterns — and aligned with Nespresso and Jitsu stakeholders on the operational requirements. Several constraints shaped the design from the start:</p>
+        <ul class="cs-list">
+          <li>The pickup is <strong>conditional</strong> — the return flow only appears when the customer's order includes a return bag. Most stops are delivery-only; drivers shouldn't see anything different on those.</li>
+          <li>Drivers <strong>cannot be blocked</strong> from completing a delivery if the customer isn't home or doesn't have the bag ready. A missed scan is not a blocker.</li>
+          <li>Nespresso required a <strong>barcode-scanned chain of custody</strong> for each collected bag to satisfy their recycling audit requirements — a simple checkbox wasn't sufficient.</li>
+          <li>Collected bags must go to the <strong>main warehouse only</strong>, not a mobile hub. This distinction was operationally critical but easy to miss without explicit copy.</li>
+          <li><strong>Phase 1 included no additional driver pay</strong> for the collection. The experience needed to feel low-effort and secondary — not a second job layered on top of the delivery.</li>
+        </ul>
+        <div class="cs-callout">
+          <p>"I'm already at their door with a package — if they hand me a bag, I'll take it. But I'm not going to knock twice or wait around."</p>
+          <span>— Driver, contextual interview</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE PLACEHOLDER: FLOW MAP -->
+  <div class="container">
+    <div class="cs-img-block cs-img-block--research">
+      <p class="cs-img-block__caption">3-phase workflow map — collect at stop, complete route, deposit at warehouse. Annotated with decision points, conditional logic, and edge cases.</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- PROCESS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Process</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Extending Without Disrupting</h2>
+        <p>The core design principle was reuse. Every driver already knew how to scan a barcode, accept a route, and confirm an action in the app. The pickup return flow needed to feel like it had always been there — not like a bolt-on feature. I audited the existing scan UI, the route confirmation screen, and the post-delivery confirmation patterns before writing a single new screen.</p>
+        <ul class="cs-list">
+          <li><strong>Route Confirmation</strong> — The existing acceptance screen needed a clear notice that the route includes customer returns. I introduced a highlighted callout above the acceptance CTA so drivers couldn't miss it — and rewrote the acceptance text to make responsibility for the returns explicit. Drivers who don't want that responsibility can decline.</li>
+          <li><strong>Scanner</strong> — The existing pickup scan UI (already used for inbound parcels) was reused with minimal changes. The only addition was the instruction copy: "Scan customer return package." Same camera view, same corner-bracket overlay, same CTA pattern.</li>
+          <li><strong>Nothing Scanned state</strong> — The most important edge case. If a driver taps "Done Scanning" without scanning anything, they land on a "Collect Customer Returns" screen showing the unscanned item with a red indicator. They can return to the scanner or tap Done to proceed. The delivery is never blocked.</li>
+          <li><strong>Deposit flow</strong> — At end of route, a bottom sheet on the Active Assignment map prompts the driver to deposit collected items. The flow gives the warehouse address, a tap-to-navigate Maps link, and "I've Arrived" to confirm. Designed to feel low-pressure — "at your convenience" language, not urgent.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LO-FI IMAGE PLACEHOLDER -->
+  <div class="container cs-final-images">
+    <div class="cs-img-block cs-img-block--wireframes">
+      <p class="cs-img-block__caption">Early wireframes — route confirmation with return notice, scanner entry, nothing-scanned state, and deposit prompt. Tested the conditional logic and escape hatches before moving to high-fidelity.</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- SOLUTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Solution</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Final Design</h2>
+        <p>The feature spans three phases that map to the natural shape of a driver's shift. Each phase reuses existing app patterns and adds only what the new workflow requires:</p>
+      </div>
+    </div>
+    <div class="container cs-features">
+      <div class="cs-feature">
+        <div class="cs-feature__number">01</div>
+        <h3>Collect at the Stop</h3>
+        <p>The route confirmation screen flags that the route includes customer returns and rewrites the acceptance CTA to make the driver's responsibility explicit. At the flagged stop, after delivery, the driver scans the return bag's barcode or skips if the customer isn't ready — they are never blocked from completing the delivery.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">02</div>
+        <h3>Track Through the Route</h3>
+        <p>Scanned bags are counted and surfaced throughout the active route so the driver always knows how many returns they're carrying. Unscanned items from skipped stops are also logged for ops visibility without requiring the driver to do anything additional.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">03</div>
+        <h3>Deposit at the Warehouse</h3>
+        <p>At route end, a non-blocking bottom sheet on the map prompts the driver to deposit collected bags at the main warehouse. The flow provides the address, tap-to-navigate, and a single "I've Arrived" confirmation. Copy explicitly states main warehouse only — not a mobile hub — eliminating a routing error discovered in early testing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HI-FI SCREENS -->
+  <div class="container cs-final-images">
+    <div class="cs-img-block cs-img-block--driver-hifi cs-img-block--tall">
+      <p class="cs-img-block__caption">High-fidelity screens — route confirmation with return notice, barcode scanner, nothing-scanned state with unscanned item listed, scanned confirmation, deposit prompt bottom sheet, and warehouse address with "I've Arrived" CTA.</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- EDGE CASES -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Edge Cases</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Language, Copy, and the Cases That Matter</h2>
+        <p>Two decisions that came out of testing had an outsized impact on how the feature was understood — neither involved adding a screen:</p>
+        <ul class="cs-list">
+          <li><strong>"Deposit Return(s)" not "Complete Return(s)"</strong> — Early screens used "Complete Return." Drivers misread this as completing a failed delivery return — a completely different (and more stressful) workflow they were already familiar with. Changing to "Deposit Return" reframed the action as a physical drop-off, not a logistics resolution. Confusion dropped immediately in follow-up testing.</li>
+          <li><strong>"Main warehouse only, not mobile hub"</strong> — In early testing, drivers were depositing bags at the nearest mobile hub rather than the main warehouse because the app didn't specify. A single added line in the deposit address card eliminated the error entirely. Small copy, meaningful operational impact.</li>
+          <li><strong>Lost or uncollected items</strong> — If a bag expected on the route was never scanned (customer skipped it), the app surfaces it as an unscanned item at the deposit stage. The driver can log it and move on; ops sees it for follow-up. Drivers are not penalized for items they couldn't collect.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE PLACEHOLDER: EDGE CASES -->
+  <div class="container">
+    <div class="cs-img-block" style="background-color: #edf5ee; border: 1px dashed #b2d8b8;">
+      <p class="cs-img-block__caption">Edge case screens — nothing-scanned state with unscanned item and red indicator, and deposit flow with warehouse-only instruction copy. [Image coming soon]</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESULTS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Results</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Impact</h2>
+        <p>The Pickup Return feature shipped in July 2024 as part of Jitsu's Nespresso delivery partnership. Because the flow was built into the existing app with no new training required, driver adoption was frictionless from day one.</p>
+      </div>
+    </div>
+    <div class="container cs-stats">
+      <div class="cs-stat">
+        <span class="cs-stat__number">0</span>
+        <p>New apps, new routes, or additional vehicles — the collection is fully absorbed into existing deliveries</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">3</span>
+        <p>Phases designed end-to-end: collect at stop, track through route, deposit at warehouse</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">100%</span>
+        <p>Chain of custody coverage — every collected bag barcode-scanned and logged before warehouse deposit</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- REFLECTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Reflection</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">What I Learned</h2>
+        <p>The most valuable thing I did on this project wasn't designing a new screen — it was deciding which screens not to design. The scanner, the confirmation card, the bottom sheet: all of those existed. The work was in identifying where the existing patterns could carry the new workflow and where they needed a specific addition. Getting that boundary right kept the feature light enough that drivers didn't feel they'd been given a new job.</p>
+        <p>The language iteration from "Complete Return" to "Deposit Return" was a reminder that copy is part of the design. A word change that takes thirty seconds to make can undo a flow that took weeks to build — in either direction. The most important design decisions in this project were often the smallest ones.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <section class="cs-next">
+    <div class="container cs-next__inner">
+      <p class="section-label">Next Project</p>
+      <h2>Outbound App</h2>
+      <a href="outbound-app.html" class="btn btn--primary">View Project &rarr;</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">David Lee</span>
+        <p>Product designer bridging pragmatic design to emotional connection. Based in the US.</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#work">UI/UX</a>
+        <a href="index.html#work">Industrial Design</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="footer__socials">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Twitter</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 David Lee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightbox-close">&times;</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

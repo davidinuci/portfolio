@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warehouse Dashboard — David Lee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <script src="auth.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">David Lee</a>
+      <ul class="nav__links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#work">UI/UX</a></li>
+        <li><a href="index.html#work">Industrial Design</a></li>
+        <li><a href="#" target="_blank">Resume</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Contact</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CASE STUDY HERO -->
+  <section class="cs-hero">
+    <div class="container cs-hero__inner">
+      <a href="index.html#work" class="cs-back">&larr; Back to Projects</a>
+      <span class="project-card__tag">Dashboard Design</span>
+      <h1 class="cs-hero__title">Warehouse Dashboard</h1>
+      <p class="cs-hero__sub">A real-time operations dashboard for warehouse management, streamlining inventory tracking, order fulfillment, and team coordination.</p>
+      <div class="cs-meta">
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Role</span>
+          <span class="cs-meta__value">Lead UX Designer</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Timeline</span>
+          <span class="cs-meta__value">3 Months</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Platform</span>
+          <span class="cs-meta__value">Web Application</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Tools</span>
+          <span class="cs-meta__value">Figma, FigJam, Maze</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="cs-cover">
+    <div class="cs-cover__img cs-cover__img--warehouse"></div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Overview</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Challenge</h2>
+        <p>Warehouse supervisors were managing daily operations through a patchwork of spreadsheets, legacy software, and verbal check-ins. Critical data — inventory levels, incoming shipments, pending orders — lived in separate systems with no unified view.</p>
+        <p>The goal was to design a single, real-time dashboard that gave supervisors and floor managers immediate situational awareness without overwhelming them with noise.</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 2.5rem;">
+      <img src="images/old.png" alt="Existing warehouse dashboard interface" style="width:100%; border-radius:10px; border:1px solid #ebebeb;" />
+      <p style="font-size:0.8rem; color:#888; margin-top:0.75rem;">The existing interface — data spread across multiple disconnected views with no unified status.</p>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESEARCH -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Research</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Understanding the Users</h2>
+        <p>I conducted contextual interviews with six warehouse supervisors and shadowed two floor shifts to observe actual workflows. Key pain points surfaced quickly:</p>
+        <ul class="cs-list">
+          <li>Supervisors spent 30–45 min each morning manually compiling status reports from three separate tools.</li>
+          <li>Inventory discrepancies were only caught at end-of-day cycle counts — too late to prevent fulfillment delays.</li>
+          <li>No visibility into which picking zones were bottlenecked vs. idle.</li>
+        </ul>
+        <div class="cs-callout">
+          <p>"I have to open four tabs just to know where we stand for the day. By the time I've done that, something else has already gone wrong."</p>
+          <span>— Warehouse Supervisor, User Interview</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE PLACEHOLDER: RESEARCH -->
+  <div class="container">
+    <div class="cs-img-block cs-img-block--research">
+      <p class="cs-img-block__caption">Affinity map from user interviews — grouped pain points into three themes: visibility, latency, and coordination.</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- PROCESS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Process</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">From Wireframes to High-Fidelity</h2>
+        <p>I started with low-fidelity wireframes to test information hierarchy with actual supervisors before investing in visual polish. Three rounds of feedback shaped the final layout:</p>
+        <ul class="cs-list">
+          <li><strong>Round 1</strong> — Confirmed the top-level KPI strip (units picked, orders pending, alerts) was the right first-read priority.</li>
+          <li><strong>Round 2</strong> — Moved zone-level status from a table to a visual floor map — users found it far more scannable.</li>
+          <li><strong>Round 3</strong> — Simplified the alert system to three severity tiers after supervisors said the original five were indistinguishable under pressure.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE PLACEHOLDER: WIREFRAMES -->
+  <div class="container">
+    <div class="cs-img-block cs-img-block--wireframes">
+      <p class="cs-img-block__caption">Mid-fidelity wireframes — tested with supervisors before moving to high-fidelity.</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- SOLUTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Solution</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Final Design</h2>
+        <p>The dashboard is organized into three layers of information, matched to three time horizons supervisors care about:</p>
+      </div>
+    </div>
+    <div class="container cs-features">
+      <div class="cs-feature">
+        <div class="cs-feature__number">01</div>
+        <h3>Real-Time KPI Strip</h3>
+        <p>A persistent top bar shows live counts for units picked, orders in queue, active alerts, and shift progress — the first thing supervisors read on arrival.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">02</div>
+        <h3>Zone Floor Map</h3>
+        <p>An interactive visual map of the warehouse floor shows throughput by zone with color-coded status (on-pace, behind, idle). Clicking a zone drills into picker-level detail.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">03</div>
+        <h3>Inventory &amp; Order Feed</h3>
+        <p>A live-updating feed surfaces low-stock alerts and at-risk orders sorted by fulfillment deadline — enabling proactive intervention instead of reactive firefighting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL DESIGN IMAGES -->
+  <div class="container cs-final-images">
+    <figure class="cs-figure">
+      <img src="images/new_level1.png" alt="Warehouse Dashboard — Problem Solve view" />
+      <figcaption>Problem Solve view — per-facility breakdown of open parcels, dwell time, and issue types.</figcaption>
+    </figure>
+    <figure class="cs-figure">
+      <img src="images/new_level2.png" alt="Warehouse Dashboard — Inbound Network overview" />
+      <figcaption>Inbound Network overview — live KPI strip, regional filters, and facility status cards.</figcaption>
+    </figure>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESULTS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Results</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Impact</h2>
+        <p>The dashboard was piloted across two warehouse sites over a 6-week period. Supervisors reported:</p>
+      </div>
+    </div>
+    <div class="container cs-stats">
+      <div class="cs-stat">
+        <span class="cs-stat__number">40%</span>
+        <p>Reduction in morning status-compilation time</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">3×</span>
+        <p>Faster identification of inventory discrepancies</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">92%</span>
+        <p>Supervisor satisfaction score in post-pilot survey</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- REFLECTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Reflection</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">What I Learned</h2>
+        <p>Designing for operational contexts taught me that data density isn't the enemy — poor hierarchy is. The supervisors wanted everything at a glance; the design challenge was sequencing information so the most urgent thing was always the most visible thing.</p>
+        <p>If I were to continue this project, I'd explore a mobile-companion view for floor managers who aren't at a fixed station, and tighter integration with the existing WMS to reduce the manual data entry that still exists upstream.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <section class="cs-next">
+    <div class="container cs-next__inner">
+      <p class="section-label">Next Project</p>
+      <h2>Remote Work Virtual Office</h2>
+      <a href="#" class="btn btn--primary">View Project &rarr;</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">David Lee</span>
+        <p>Product designer bridging pragmatic design to emotional connection. Based in the US.</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#work">UI/UX</a>
+        <a href="index.html#work">Industrial Design</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="footer__socials">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Twitter</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 David Lee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -246,6 +246,66 @@ h1, h2, h3 {
 }
 
 /* ===========================
+   About Bio
+=========================== */
+.about-bio {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.about-bio__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.about-bio__left .section-title {
+  margin-bottom: 1.5rem;
+}
+
+.about-bio__text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.about-bio__right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 2.5rem;
+}
+
+.about-bio__group-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.6rem;
+}
+
+.about-bio__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.about-bio__list li {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.about-bio__list--inline {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+}
+
+/* ===========================
    Values
 =========================== */
 .values {
@@ -329,6 +389,10 @@ h1, h2, h3 {
 .project-card__img--2 { background-color: #d4f0e3; }
 .project-card__img--3 { background-color: #f7ead4; }
 .project-card__img--4 { background-color: #ead4f7; }
+.project-card__img--5 { background-color: #d4f7f0; }
+.project-card__img--6 { background-color: #fef3e2; }
+.project-card__img--7 { background-color: #daf0e3; }
+.project-card__img--8 { background-color: #e8f5e9; }
 
 .project-card__body {
   padding: 1.75rem;
@@ -548,6 +612,15 @@ h1, h2, h3 {
    Responsive
 =========================== */
 @media (max-width: 900px) {
+  .about-bio__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-bio__right {
+    padding-top: 0;
+  }
+
   .values__grid {
     grid-template-columns: repeat(2, 1fr);
   }

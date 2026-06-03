@@ -45,6 +45,37 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Lightbox for case study images
+(function () {
+  const overlay = document.createElement('div');
+  overlay.className = 'lightbox';
+  overlay.innerHTML = '<button class="lightbox__close" aria-label="Close">&times;</button><img class="lightbox__img" />';
+  document.body.appendChild(overlay);
+
+  const lightboxImg = overlay.querySelector('.lightbox__img');
+
+  function open(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', (e) => {
+    const img = e.target.closest('.cs-figure img');
+    if (img) open(img.src, img.alt);
+  });
+
+  overlay.querySelector('.lightbox__close').addEventListener('click', close);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay || e.target === lightboxImg) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+})();
+
 // Add visible class styles via JS
 const style = document.createElement('style');
 style.textContent = '.values__card.visible, .project-card.visible { opacity: 1 !important; transform: translateY(0) !important; }';

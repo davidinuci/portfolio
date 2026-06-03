@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outbound App — David Lee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <script src="auth.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">David Lee</a>
+      <ul class="nav__links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#work">UI/UX</a></li>
+        <li><a href="index.html#work">Industrial Design</a></li>
+        <li><a href="#" target="_blank">Resume</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Contact</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CASE STUDY HERO -->
+  <section class="cs-hero">
+    <div class="container cs-hero__inner">
+      <a href="index.html#work" class="cs-back">&larr; Back to Projects</a>
+      <span class="project-card__tag">Mobile App Design</span>
+      <h1 class="cs-hero__title">Outbound App</h1>
+      <p class="cs-hero__sub">Redesigning the driver pickup experience for Jitsu's last-mile delivery hubs — a new Scan to Collect flow and a proactive Parking mode that together reduce congestion and establish a tighter chain of custody for every outbound parcel.</p>
+      <div class="cs-meta">
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Role</span>
+          <span class="cs-meta__value">Lead Product Designer</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Timeline</span>
+          <span class="cs-meta__value">4 Months</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Platform</span>
+          <span class="cs-meta__value">iOS, Android &amp; Zebra</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Tools</span>
+          <span class="cs-meta__value">Figma, FigJam</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="cs-cover">
+    <div class="cs-cover__img cs-cover__img--outbound"></div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Overview</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Challenge</h2>
+        <p>At Jitsu's distribution hubs, outbound associates were handing parcels to drivers with no structured verification step. The existing app only surfaced small sort package locations — large sort packages were entirely out of scope, meaning associates had to mentally track two separate systems during every handoff. At peak shift starts, drivers and associates were in the same physical space at the same time, creating congestion at the small sort desk with no mechanism for proactive preparation.</p>
+        <p>Beyond congestion, there was no reliable chain of custody between the sort wall and the driver's vehicle. Missorted parcels were discovered late, missing packages had no standardized search protocol, and there was no event record of who handed what to whom. The goal was to redesign the Scan to Collect experience from the ground up — and introduce a second mode, Parking, that let associates proactively prepare loads and bring them to drivers waiting in the lot.</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 2.5rem;">
+      <figure class="cs-figure cs-figure--mobile">
+        <img src="images/outbound-old.png" alt="Existing outbound app — Arrival screen with Parking tab" />
+        <figcaption>The existing outbound app — small sort only, no driver ID lookup, no location grouping, and no chain of custody scan before handoff.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESEARCH -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Research</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Understanding the Users</h2>
+        <p>I spent time shadowing outbound associates across morning peak shifts at two Jitsu hubs, then conducted follow-up interviews with associates, shift leads, and drivers. The findings split cleanly between the two user groups:</p>
+        <ul class="cs-list">
+          <li>Associates manually cross-referenced route manifests against physical parcel locations scattered across multiple areas of the small sort layout — they had no way to know when they had fully cleared a location.</li>
+          <li>When a scanned parcel didn't belong to the route being collected, there was no prompt — the missort either went unnoticed or required a verbal escalation that disrupted the handoff.</li>
+          <li>Drivers arrived at the desk not knowing whether their load was ready. With no proactive preparation system, the desk became a bottleneck as multiple drivers queued simultaneously at shift start.</li>
+          <li>Missing packages had no standardized search process — associates had no access to a parcel's last known location or who had last touched it.</li>
+        </ul>
+        <div class="cs-callout">
+          <p>"I know the packages are in two or three different spots but the app just gives me one big list. I have to keep running back to check I didn't miss anything at the first spot."</p>
+          <span>— Outbound Associate, Contextual Interview</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE PLACEHOLDER: RESEARCH -->
+  <div class="container">
+    <div class="cs-img-block cs-img-block--research">
+      <p class="cs-img-block__caption">Affinity map from associate and driver interviews — pain points clustered into four themes: location visibility, chain of custody, missort handling, and driver congestion.</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- PROCESS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Process</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">From Wireframes to High-Fidelity</h2>
+        <p>The core design challenge was sequencing the workflow so that every decision point — badge scan, route selection, location-by-location collection, exception handling — felt like a natural next step rather than a branch in a decision tree. I ran three rounds of lo-fi testing with active outbound associates on the floor before moving to high-fidelity.</p>
+        <ul class="cs-list">
+          <li><strong>Round 1</strong> — Early wireframes grouped all parcels in a flat list sorted by route. Associates immediately flagged that they needed to see groupings by physical location, not route — "I need to know when I've finished a spot, not when I've scanned half a route."</li>
+          <li><strong>Round 2</strong> — Introduced location cards with per-location progress counters. Testing revealed that associates needed a clear visual distinction between an in-progress location and a fully cleared one — a progress bar alone wasn't enough; they needed a state change (color + checkmark) to feel confident before moving on.</li>
+          <li><strong>Round 3</strong> — Missort and missing parcel flows were tested in isolation. Associates found inline exception handling — resolving a missort without leaving the collection screen — significantly faster than a separate modal flow that had been in earlier designs.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LO-FI WIREFRAMES IMAGE -->
+  <div class="container cs-final-images">
+    <figure class="cs-figure">
+      <img src="images/outbound-lofi.png" alt="Lo-fi wireframes — OB scan driver badge flow" />
+      <figcaption>Lo-fi wireframes — six-screen flow from badge scan through route details, location-grouped collection progress, and complete handoff. Tested with associates on the floor before moving to high-fidelity.</figcaption>
+    </figure>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- SOLUTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Solution</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Final Design</h2>
+        <p>The redesigned app operates in two distinct modes depending on whether staff are available — both modes share the same driver ID and route lookup foundation, then diverge based on who is doing the work and where:</p>
+      </div>
+    </div>
+    <div class="container cs-features">
+      <div class="cs-feature">
+        <div class="cs-feature__number">01</div>
+        <h3>Driver Badge Scan &amp; Route Lookup</h3>
+        <p>Associates scan the driver's badge ID using a Zebra hardware scanner or manual entry. The app instantly surfaces the driver's name, vehicle, and all routes assigned for pickup — including both small sort and large sort package locations. Associates select one or more routes to begin collection.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">02</div>
+        <h3>Location-Grouped Collection</h3>
+        <p>Each physical location where parcels are staged appears as its own card with a live count (e.g., 5 / 23 scanned). As associates clear a location, the card transitions to a completed state with a checkmark — giving them unambiguous confidence before moving on. Missorted parcels trigger an immediate inline prompt to redirect the parcel to its correct location.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">03</div>
+        <h3>Two-Mode Handoff: Walk-In &amp; Parking</h3>
+        <p>When staff are occupied, drivers walk into the outbound area and associates use Scan to Collect at the desk. When staff are free, the Parking mode lets associates proactively stage and bring the full load — small and large sort — directly to the driver's vehicle in the lot, eliminating desk congestion entirely at peak shift starts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HI-FI DESIGN IMAGES -->
+  <div class="container cs-final-images">
+    <figure class="cs-figure">
+      <img src="images/outbound-hifi.png" alt="High-fidelity screens — Outbound App Scan to Collect and Parking mode" />
+      <figcaption>High-fidelity screens — badge scan, route details with large and small sort locations, location-grouped collection progress (0 → 23/23), success states, and complete handoff to driver. Bottom left shows the existing purple Arrival app context; bottom right shows location cards transitioning to completed state.</figcaption>
+    </figure>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- EXCEPTION HANDLING CALLOUT -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Edge Cases</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Handling Missorts &amp; Missing Parcels</h2>
+        <p>Two edge cases required dedicated flows rather than generic error states — both are high-stakes enough to warrant their own resolution path:</p>
+        <ul class="cs-list">
+          <li><strong>Missort detection</strong> — When a scanned barcode doesn't belong to the active route, the app logs a missort event and surfaces the correct destination location so the associate can immediately re-sort the parcel. The collection flow resumes only after the missort is resolved — preventing misdirected packages from reaching the driver.</li>
+          <li><strong>Missing parcels</strong> — If a parcel can't be located, the app displays its last known position and the identity of the associate who last handled it. The searching associate can attest they have physically looked (a logged button tap), then remove the parcel from the driver's route so the rest of the handoff can proceed without holding up the driver.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE PLACEHOLDER: EDGE CASES -->
+  <div class="container">
+    <div class="cs-img-block" style="background-color: #fff3f0; border: 1px dashed #e0c8c5;">
+      <p class="cs-img-block__caption">Exception flows — missort redirection prompt and missing parcel resolution screen with last-known location and attestation. [Image coming soon]</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESULTS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Results</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Impact</h2>
+        <p>The redesigned Scan to Collect flow and Parking mode were piloted across two Jitsu hubs over a 6-week period. Results measured against the pre-launch baseline:</p>
+      </div>
+    </div>
+    <div class="container cs-stats">
+      <div class="cs-stat">
+        <span class="cs-stat__number">55%</span>
+        <p>Reduction in desk congestion during peak shift start windows</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">3×</span>
+        <p>Improvement in missort detection rate before driver departure</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">91%</span>
+        <p>Associate task completion rate in post-pilot usability sessions</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- REFLECTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Reflection</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">What I Learned</h2>
+        <p>The most important design decision in this project wasn't a screen — it was the principle that completion confidence matters more than raw progress. Associates didn't just need to know how many parcels were left; they needed to know when a physical space had been fully cleared before they walked away from it. That shift from a global count to location-level completion states was what resolved the "did I miss something?" anxiety that had driven workarounds in the old flow.</p>
+        <p>If I were to extend this project, I'd explore push notifications that alert an associate's device when a driver's expected arrival window is approaching — so the Parking mode preparation can begin before the driver is even on site, further absorbing congestion before it forms. I'd also invest in the dispatcher companion view to give shift leads visibility into which drivers have been handed off and which are still waiting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <section class="cs-next">
+    <div class="container cs-next__inner">
+      <p class="section-label">Next Project</p>
+      <h2>Warehouse Dashboard</h2>
+      <a href="warehouse-dashboard.html" class="btn btn--primary">View Project &rarr;</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">David Lee</span>
+        <p>Product designer bridging pragmatic design to emotional connection. Based in the US.</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#work">UI/UX</a>
+        <a href="index.html#work">Industrial Design</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="footer__socials">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Twitter</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 David Lee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
