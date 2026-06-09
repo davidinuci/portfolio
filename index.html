@@ -8,6 +8,162 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    body.gate-open { overflow: hidden; }
+
+    #portfolio-gate {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #fafafa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    #portfolio-gate .gate {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    #portfolio-gate .gate__logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.75rem;
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+
+    #portfolio-gate .gate__card {
+      width: 100%;
+      background: #fff;
+      border: 1px solid #ebebeb;
+      border-radius: 12px;
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    #portfolio-gate .gate__heading {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      color: #1a1a1a;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    #portfolio-gate .gate__sub {
+      font-size: 0.9rem;
+      color: #888;
+      line-height: 1.6;
+      margin-top: -0.75rem;
+    }
+
+    #portfolio-gate .gate__field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    #portfolio-gate .gate__label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    #portfolio-gate .gate__input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    #portfolio-gate .gate__input {
+      width: 100%;
+      padding: 0.8rem 3rem 0.8rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: #1a1a1a;
+      background: #fafafa;
+      transition: border-color 0.2s, background 0.2s;
+      letter-spacing: 0.2em;
+    }
+
+    #portfolio-gate .gate__input:focus {
+      outline: none;
+      border-color: #1a1a1a;
+      background: #fff;
+    }
+
+    #portfolio-gate .gate__input.error {
+      border-color: #c0392b;
+      background: #fff8f7;
+    }
+
+    #portfolio-gate .gate__toggle {
+      position: absolute;
+      right: 0.85rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #aaa;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      transition: color 0.2s;
+    }
+
+    #portfolio-gate .gate__toggle:hover { color: #555; }
+
+    #portfolio-gate .gate__toggle svg {
+      width: 18px;
+      height: 18px;
+      pointer-events: none;
+    }
+
+    #portfolio-gate .gate__error {
+      font-size: 0.8rem;
+      color: #c0392b;
+      font-weight: 500;
+      display: none;
+    }
+
+    #portfolio-gate .gate__error.visible { display: block; }
+
+    #portfolio-gate .gate__btn {
+      width: 100%;
+      padding: 0.85rem;
+      background: #1a1a1a;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    #portfolio-gate .gate__btn:hover { background: #333; }
+    #portfolio-gate .gate__btn:active { transform: scale(0.98); }
+
+    #portfolio-gate .gate__footer {
+      font-size: 0.8rem;
+      color: #bbb;
+      text-align: center;
+    }
+  </style>
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5YFQMYE4YG"></script>
   <script>
@@ -17,7 +173,51 @@
     gtag('config', 'G-5YFQMYE4YG');
   </script>
 </head>
-<body>
+<body class="gate-open">
+
+  <!-- PASSCODE GATE -->
+  <div id="portfolio-gate">
+    <div class="gate">
+      <span class="gate__logo">David Lee</span>
+
+      <div class="gate__card">
+        <h1 class="gate__heading">Protected Portfolio</h1>
+        <p class="gate__sub">Enter the password to view this portfolio.</p>
+
+        <form id="gate-form" novalidate>
+          <div class="gate__field">
+            <label class="gate__label" for="gate-password">Password</label>
+            <div class="gate__input-wrap">
+              <input
+                class="gate__input"
+                type="password"
+                id="gate-password"
+                autocomplete="current-password"
+                placeholder="••••••••"
+                autofocus
+              />
+              <button type="button" class="gate__toggle" id="gate-toggle" aria-label="Show password">
+                <svg id="gate-icon-eye" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <svg id="gate-icon-eye-off" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" style="display:none">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.477 0-8.268-2.943-9.542-7a9.97 9.97 0 012.19-3.568M6.53 6.53A9.97 9.97 0 0112 5c4.478 0 8.268 2.943 9.542 7a9.972 9.972 0 01-4.043 5.306M6.53 6.53L3 3m3.53 3.53l11 11M17.47 17.47L21 21" />
+                </svg>
+              </button>
+            </div>
+            <span class="gate__error" id="gate-error">Incorrect password. Please try again.</span>
+          </div>
+
+          <div style="margin-top: 1.25rem;">
+            <button type="submit" class="gate__btn">Enter Portfolio</button>
+          </div>
+        </form>
+      </div>
+
+      <p class="gate__footer">&copy; 2024 David Lee</p>
+    </div>
+  </div>
 
   <!-- NAV -->
   <nav class="nav">
@@ -234,5 +434,48 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <script>
+    const SESSION_KEY = 'dl_portfolio_auth';
+    const CORRECT     = '1234';
+    const gateEl      = document.getElementById('portfolio-gate');
+    const form        = document.getElementById('gate-form');
+    const input       = document.getElementById('gate-password');
+    const errorMsg    = document.getElementById('gate-error');
+    const toggleBtn   = document.getElementById('gate-toggle');
+    const iconEye     = document.getElementById('gate-icon-eye');
+    const iconEyeOff  = document.getElementById('gate-icon-eye-off');
+
+    if (sessionStorage.getItem(SESSION_KEY) === 'true') {
+      gateEl.remove();
+      document.body.classList.remove('gate-open');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const isPassword = input.type === 'password';
+      input.type = isPassword ? 'text' : 'password';
+      iconEye.style.display    = isPassword ? 'none'  : 'block';
+      iconEyeOff.style.display = isPassword ? 'block' : 'none';
+    });
+
+    input.addEventListener('input', () => {
+      input.classList.remove('error');
+      errorMsg.classList.remove('visible');
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (input.value === CORRECT) {
+        sessionStorage.setItem(SESSION_KEY, 'true');
+        gateEl.remove();
+        document.body.classList.remove('gate-open');
+      } else {
+        input.classList.add('error');
+        errorMsg.classList.add('visible');
+        input.value = '';
+        input.focus();
+      }
+    });
+  </script>
 </body>
 </html>
