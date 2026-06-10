@@ -397,12 +397,12 @@ h1, h2, h3 {
   background-position: center;
 }
 
-.project-card__img--1 { background-color: #d4e3f7; }
+.project-card__img--1 { background-color: #f0f0f0; background-image: url('images/card-bhive.jpg'); background-size: 82%; background-repeat: no-repeat; background-position: center center; }
 .project-card__img--2 { background-color: #d4f0e3; }
-.project-card__img--3 { background-color: #f7ead4; }
-.project-card__img--4 { background-color: #ead4f7; }
-.project-card__img--5 { background-color: #d4f7f0; }
-.project-card__img--6 { background-color: #fef3e2; }
+.project-card__img--3 { background-color: #1c1c1c; background-image: url('images/card-safe-sound.jpg'); background-size: 82%; background-repeat: no-repeat; background-position: center center; }
+.project-card__img--4 { background-color: #f5c4b0; background-image: url('images/card-much-love.jpg'); background-size: 82%; background-repeat: no-repeat; background-position: center center; }
+.project-card__img--5 { background-color: #d4f7f0; background-image: url('images/card-dashboard.jpg'); background-size: 82%; background-repeat: no-repeat; background-position: center center; }
+.project-card__img--6 { background-color: #0F1F12; background-image: url('images/card-outbound.svg'); background-size: cover; background-position: center center; }
 .project-card__img--7 { background-color: #daf0e3; }
 .project-card__img--8 { background-color: #e8f5e9; }
 

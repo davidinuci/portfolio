@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Much Love — David Lee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <script src="auth.js"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5YFQMYE4YG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5YFQMYE4YG');
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">David Lee</a>
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#work">UI/UX</a></li>
+        <li><a href="index.html#work">Industrial Design</a></li>
+        <li><a href="#" target="_blank">Resume</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Contact</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CASE STUDY HERO -->
+  <section class="cs-hero">
+    <div class="container cs-hero__inner">
+      <a href="index.html#work" class="cs-back">&larr; Back to Projects</a>
+      <span class="project-card__tag">Web Design</span>
+      <h1 class="cs-hero__title">Much Love</h1>
+      <p class="cs-hero__sub">Redesigning the Much Love Animal Rescue website to make adoption, fostering, volunteering, and donating feel clear and inviting — transforming an overwhelming wall of information into a guided, step-by-step experience.</p>
+      <div class="cs-meta">
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Role</span>
+          <span class="cs-meta__value">UX Designer</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Timeline</span>
+          <span class="cs-meta__value">1 Month · 2021</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Platform</span>
+          <span class="cs-meta__value">Web (Desktop + Mobile)</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Tools</span>
+          <span class="cs-meta__value">Figma, Miro, HTML/CSS/JS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="cs-cover">
+    <div class="cs-cover__img cs-cover__img--much-love"></div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Overview</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Challenge</h2>
+        <p>Much Love Animal Rescue's website had a fundamental information architecture problem: it contained a wealth of helpful content, but users couldn't find the most important things — how to adopt a pet, what the process involved, or how to donate effectively. Content was text-heavy, processes were buried, and donation options were so numerous they created decision paralysis.</p>
+        <p>The goal was to redesign the site so that anyone arriving with intent to adopt, foster, volunteer, or donate could immediately understand what to do next — guided step-by-step rather than left to hunt through dense pages.</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 2.5rem;">
+      <img src="images/ml-mobile.jpg" alt="Much Love redesign — mobile version" style="width:100%; border-radius:10px; border:1px solid #ebebeb;" />
+      <p style="font-size:0.8rem; color:#888; margin-top:0.75rem;">Mobile redesign — clear calls to action and streamlined content hierarchy replacing the original text-heavy layout.</p>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESEARCH -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Research</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Understanding the Users</h2>
+        <p>Research combined a survey of ten respondents, five one-on-one interviews, a SWOT competitor analysis of three animal rescue organizations, and a heuristic evaluation of the existing Much Love site. The existing site's problems came into sharp focus:</p>
+        <ul class="cs-list">
+          <li>No clear adoption process — users didn't know what steps to follow or what was expected of them.</li>
+          <li>Content was too text-heavy — important information was buried inside paragraphs instead of surfaced as scannable steps.</li>
+          <li>Too many donation options — abundance created confusion, not generosity, leading to abandonment.</li>
+          <li>Users wanted access to animal medical history upfront — a key trust signal that was missing entirely.</li>
+        </ul>
+        <div class="cs-callout">
+          <p>"Love animals but I don't know if I am ready to have my own."</p>
+          <span>— Primary persona, reflecting the anxiety around commitment that the design needed to reduce</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 2.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ml-heuristic.png" alt="Heuristic evaluation of existing Much Love homepage" />
+        <figcaption>Heuristic evaluation of the existing homepage — identified usability violations driving the redesign.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ml-survey-responses.jpg" alt="Survey responses" />
+        <figcaption>Survey data — 70% pet owners, 30% prior rescue adopters among the 10 respondents.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ml-affinity.jpg" alt="Interview affinity diagram" />
+        <figcaption>Interview affinity diagram — insights from five one-on-one sessions clustered by theme.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ml-competitor.jpg" alt="Competitor analysis" />
+        <figcaption>Competitor analysis — SWOT mapping of three animal rescue organizations' web experiences.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ml-feature-prioritization.jpg" alt="Feature prioritization" />
+        <figcaption>Feature prioritization — ranked research-identified improvements by user impact and feasibility.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem;">
+      <figure class="cs-figure">
+        <img src="images/ml-persona.jpg" alt="Primary user persona" />
+        <figcaption>Primary persona — an animal lover who wants to adopt but feels uncertain about the process and commitment.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- PROCESS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Process</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Designing the New Experience</h2>
+        <p>The design process began with storyboarding and task flow mapping for the two most critical journeys: adoption and donation. These flows became the backbone of the redesign — every screen was evaluated against whether it moved the user confidently toward completing one of these goals.</p>
+        <ul class="cs-list">
+          <li><strong>Storyboard</strong> — mapped the emotional journey from first visit through adoption completion to set the right tone for each screen.</li>
+          <li><strong>Task flows</strong> — diagrammed the adoption and donation processes separately before wireframing, identifying where the existing site forced unnecessary detours.</li>
+          <li><strong>Style guide</strong> — developed a warm, visually appealing design language that conveyed care and trust before a single interaction.</li>
+          <li><strong>A/B testing</strong> — four design variations were tested to validate the most effective layout for the adoption flow.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 2.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ml-storyboard.jpg" alt="User journey storyboard" />
+        <figcaption>Storyboard — emotional journey from first visit to adoption completion, informing the tone of each screen.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ml-adoption-task-flow.jpg" alt="Adoption process task flow" />
+        <figcaption>Adoption task flow — step-by-step map of the process from browsing animals to completing an application.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ml-adoption-wireframe.jpg" alt="Adoption process wireframe" />
+        <figcaption>Adoption wireframes — low-fidelity screens aligned to the task flow before visual design.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ml-donation-task-flow.jpg" alt="Donation process task flow" />
+        <figcaption>Donation task flow — streamlined from the original multi-step, multi-option confusion to a clear two-step process.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ml-donation-wireframe.jpg" alt="Donation process wireframe" />
+        <figcaption>Donation wireframes — amount selection and confirmation screens designed for minimal friction.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem;">
+      <figure class="cs-figure">
+        <img src="images/ml-style-guide.jpg" alt="Visual style guide" />
+        <figcaption>Style guide — warm color palette, approachable typography, and imagery guidelines communicating care and trust.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- SOLUTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Solution</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Redesigned Site</h2>
+        <p>The redesign replaced a content-dump homepage with clear calls to action and dedicated guided flows for each user intent. Rather than expecting visitors to read their way to a decision, the site now leads them through structured steps — reducing anxiety about the adoption process and making donations feel purposeful rather than overwhelming.</p>
+      </div>
+    </div>
+    <div class="container cs-features">
+      <div class="cs-feature">
+        <div class="cs-feature__number">01</div>
+        <h3>Guided Adoption Flow</h3>
+        <p>A pop-up qualification step surfaces eligibility and fee information upfront — removing surprises late in the process that caused abandonment. Users are walked through each step sequentially rather than presented with a wall of requirements.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">02</div>
+        <h3>Animal Medical History</h3>
+        <p>Research identified this as a top-requested feature — and a key trust signal. Displaying medical history on each animal's profile page reduces hesitancy and helps prospective adopters make more confident decisions.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">03</div>
+        <h3>Streamlined Donations</h3>
+        <p>Reduced the donation experience from a confusing multi-option page to a clean amount selector with one clear confirmation step. Fewer choices, faster completion, more confident donors.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">04</div>
+        <h3>Responsive Mobile Design</h3>
+        <p>Full mobile-first redesign with responsive pop-ups and touch-friendly interaction patterns — meeting users where they are rather than assuming a desktop context.</p>
+      </div>
+    </div>
+
+    <div class="container cs-final-images">
+      <!-- Mobile screens — 2-up at phone width -->
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: start;">
+        <figure class="cs-figure cs-figure--mobile" style="align-items: center;">
+          <img src="images/ml-adoption.gif" alt="Adoption flow animated prototype" />
+          <figcaption>Adoption flow — from browsing animals through qualification pop-up to application submission.</figcaption>
+        </figure>
+        <figure class="cs-figure cs-figure--mobile" style="align-items: center;">
+          <img src="images/ml-donation.gif" alt="Donation flow animated prototype" />
+          <figcaption>Donation flow — streamlined amount selection and confirmation replacing the original multi-option confusion.</figcaption>
+        </figure>
+      </div>
+      <!-- Desktop screen — full width -->
+      <figure class="cs-figure">
+        <img src="images/ml-desktop.gif" alt="Desktop version animated prototype" />
+        <figcaption>Desktop version — full site experience with animated transitions and interactive elements.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESULTS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Testing</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">A/B Testing &amp; Iteration</h2>
+        <p>Four design variations were tested to validate the most effective approach for the adoption flow. The primary question was how to present the qualification information — pop-up, slide-in panel, or inline form — to maximize completion without creating friction. Three iterations refined the winning pattern.</p>
+      </div>
+    </div>
+    <div class="container cs-stats">
+      <div class="cs-stat">
+        <span class="cs-stat__number">4</span>
+        <p>design variations A/B tested for the adoption flow layout</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">3</span>
+        <p>key pain points addressed: unclear process, heavy content, too many donation options</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">70%</span>
+        <p>of survey respondents were pet owners — confirming the right audience was being reached</p>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ml-ab-1.jpg" alt="A/B test variation 1" />
+        <figcaption>A/B variation 1 — initial layout tested with users for adoption flow entry point.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ml-ab-2.jpg" alt="A/B test variation 2" />
+        <figcaption>A/B variation 2 — alternative layout with repositioned calls to action.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ml-ab-3.jpg" alt="A/B test variation 3" />
+        <figcaption>A/B variation 3 — condensed header with prominent adoption CTA above the fold.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ml-ab-4.jpg" alt="A/B test variation 4" />
+        <figcaption>A/B variation 4 — final tested layout that became the basis for the iteration phase.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem;">
+      <figure class="cs-figure">
+        <img src="images/ml-iter-popup.jpg" alt="Adoption iteration: pop-up qualification" />
+        <figcaption>Iteration 1 — pop-up qualification form presenting eligibility and fees before the full adoption application.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ml-iter-slide.jpg" alt="Adoption iteration: slide-in panel" />
+        <figcaption>Iteration 2 — slide-in panel tested as an alternative to the full pop-up.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ml-iter-form.jpg" alt="Adoption iteration: inline form" />
+        <figcaption>Iteration 3 — inline form approach, allowing users to complete qualification without a modal interruption.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- REFLECTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Reflection</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">What I Learned</h2>
+        <p>This project demonstrated how much damage a misaligned information architecture can do to a mission-driven organization. Much Love had the content — they just presented it in a way that overwhelmed rather than guided. The most impactful change wasn't a visual redesign; it was reordering information so the right thing appeared at the right moment in the user's decision process.</p>
+        <p>The A/B testing phase was particularly instructive. All four variations felt "reasonable" from a design perspective, but user testing revealed that seemingly small differences — where the qualification pop-up appeared, how fees were disclosed — had significant effects on users' confidence and willingness to continue. Design intuition isn't enough: you have to test.</p>
+        <p>If continuing this project, I'd add a live chat or quick-contact feature for prospective adopters with specific questions — the research showed that uncertainty about the process was the biggest barrier, and a human touchpoint at the right moment could meaningfully improve conversion.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <section class="cs-next">
+    <div class="container cs-next__inner">
+      <p class="section-label">Next Project</p>
+      <h2>Warehouse Dashboard</h2>
+      <a href="warehouse-dashboard.html" class="btn btn--primary">View Project &rarr;</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">David Lee</span>
+        <p>Product designer bridging pragmatic design to emotional connection. Based in the US.</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="about.html">About</a>
+        <a href="index.html#work">UI/UX</a>
+        <a href="index.html#work">Industrial Design</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="footer__socials">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Twitter</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 David Lee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

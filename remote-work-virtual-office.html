@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remote Work Virtual Office — David Lee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <script src="auth.js"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5YFQMYE4YG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5YFQMYE4YG');
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">David Lee</a>
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#work">UI/UX</a></li>
+        <li><a href="index.html#work">Industrial Design</a></li>
+        <li><a href="#" target="_blank">Resume</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Contact</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CASE STUDY HERO -->
+  <section class="cs-hero">
+    <div class="container cs-hero__inner">
+      <a href="index.html#work" class="cs-back">&larr; Back to Projects</a>
+      <span class="project-card__tag">UX Design</span>
+      <h1 class="cs-hero__title">Remote Work Virtual Office</h1>
+      <p class="cs-hero__sub">Desktop and web applications that make virtual team management easier — creating a virtual office environment that restores the ambient awareness of an open floor plan for remote call agents.</p>
+      <div class="cs-meta">
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Role</span>
+          <span class="cs-meta__value">UX Designer</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Timeline</span>
+          <span class="cs-meta__value">8 Months · 2022</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Platform</span>
+          <span class="cs-meta__value">Desktop App + Web Portal</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Tools</span>
+          <span class="cs-meta__value">Adobe XD, Illustrator, Photoshop</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="cs-cover">
+    <div class="cs-cover__img cs-cover__img--bhive"></div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Overview</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Challenge</h2>
+        <p>When Broadpath Healthcare transitioned their call agent workforce to remote work post-COVID, something invisible broke: the ambient awareness of a shared office. Agents no longer knew who was available, who was on break, or who to reach out to. Managers lost visibility into their teams. Miscommunications increased and engagement dropped.</p>
+        <p>The goal was to design Bhive — a virtual office platform consisting of a desktop application and web portal — that would restore that human connection layer for remote teams without requiring employees to be on camera all day.</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 2.5rem;">
+      <img src="images/bhive-overview.jpg" alt="Bhive platform overview" style="width:100%; border-radius:10px; border:1px solid #ebebeb;" />
+      <p style="font-size:0.8rem; color:#888; margin-top:0.75rem;">The Bhive platform — desktop application and web portal working together to create a connected remote work environment.</p>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESEARCH -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Research</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Understanding the Users</h2>
+        <p>Research began with observation-based discovery at Broadpath Healthcare. I conducted user interviews with call agents, distributed surveys across the organization, and performed a competitor analysis of similar tools in the healthcare software space. Three themes emerged consistently:</p>
+        <ul class="cs-list">
+          <li>Agents had no way to signal their availability or current work state to colleagues — every interruption felt like a cold call.</li>
+          <li>Managers lacked visibility into remote team activity without resorting to intrusive check-ins or surveillance-style monitoring.</li>
+          <li>Camera-based solutions felt invasive — employees didn't want to be recorded all day, which killed adoption of video-presence tools.</li>
+        </ul>
+        <div class="cs-callout">
+          <p>"Most of the users don't feel comfortable being recorded on the camera all the time."</p>
+          <span>— Recurring sentiment from user interviews</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 2.5rem;">
+      <figure class="cs-figure">
+        <img src="images/bhive-quotes.png" alt="User interview quotes from call agents" />
+        <figcaption>User interview quotes — recurring themes around communication barriers and camera fatigue.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/bhive-survey.jpg" alt="Survey results from remote employees" />
+        <figcaption>Survey data collected across the Broadpath organization.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/bhive-competitor.jpg" alt="Healthcare software competitor analysis" />
+        <figcaption>Competitor analysis — healthcare remote work tools mapped by feature set.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- PROCESS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Process</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Designing in Phases</h2>
+        <p>The project shipped in two main phases. Phase 1 focused on status and productivity infrastructure. Phase 2 introduced the avatar system — a direct response to the privacy concerns surfaced in research.</p>
+        <ul class="cs-list">
+          <li><strong>Phase 1</strong> — Designed the desktop app for real-time status broadcasting and timesheet tracking, plus a web portal for employee profiles and team surveys.</li>
+          <li><strong>Phase 2 (Avatar Launch)</strong> — Introduced facial detection technology to generate real-time avatars via Ready Player Me, giving employees visual presence without live camera. This unlocked the virtual office feature stakeholders had originally requested.</li>
+          <li><strong>Simplification</strong> — The initial virtual office prototype included a music plugin and richer environment; IT restrictions required us to scope it down. We added a toggle between the virtual office view and the standard profile view.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 2.5rem;">
+      <figure class="cs-figure">
+        <img src="images/bhive-hmw.png" alt="How Might We framing for the Bhive project" />
+        <figcaption>Define phase — How Might We framing that shaped the product direction.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem;">
+      <figure class="cs-figure">
+        <img src="images/bhive-phase1.png" alt="Phase 1 prototype wireframes" />
+        <figcaption>Phase 1 prototype — status system and web portal flows tested with call agents before high-fidelity.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/bhive-style-guide-01.png" alt="Style guide part 1" />
+        <figcaption>Visual design system — typography, color, and component foundations.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/bhive-style-guide-02.png" alt="Style guide part 2" />
+        <figcaption>Component library — UI patterns established for both desktop and web products.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- SOLUTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Solution</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Final Platform</h2>
+        <p>Bhive ships as two connected products: a desktop application for real-time presence and productivity, and a web portal that acts as the social and administrative layer of the remote office.</p>
+      </div>
+    </div>
+    <div class="container cs-features">
+      <div class="cs-feature">
+        <div class="cs-feature__number">01</div>
+        <h3>Work Status System</h3>
+        <p>Employees broadcast their current state — Focus Mode, On Break, At Lunch — through the desktop app. Status icons were validated through A/B testing against alphabetic labels; graphical icons won by 59%.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">02</div>
+        <h3>Avatar Presence</h3>
+        <p>Facial detection generates a personalized avatar via Ready Player Me, displayed in the virtual office. Employees get visual presence in the shared workspace without being on camera — addressing the core privacy concern from research.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">03</div>
+        <h3>Virtual Home Office</h3>
+        <p>The web portal surfaces a shared virtual workspace where avatars populate the "floor" — giving teams ambient awareness of who's at their desk. A toggle lets users switch between the virtual office view and their profile page.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">04</div>
+        <h3>Timesheets &amp; Surveys</h3>
+        <p>Integrated timesheet submission with manager approval, and a survey tool for collecting team feedback — embedded directly in the platform so managers don't need to context-switch to separate tools.</p>
+      </div>
+    </div>
+
+    <div class="container cs-final-images">
+      <figure class="cs-figure">
+        <img src="images/bhive-status-dashboard.png" alt="Bhive desktop app — status and timesheet dashboard" />
+        <figcaption>Desktop application — real-time status broadcasting, timesheet recording, and manager visibility tools.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/bhive-avatar.png" alt="Bhive web portal — avatar creation flow" />
+        <figcaption>Avatar creation flow — employees customize their presence via Ready Player Me, solving the privacy barrier.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/bhive-virtual-office.png" alt="Bhive virtual home office wireframe" />
+        <figcaption>Virtual home office — avatars populate the shared workspace, giving teams ambient awareness of who's at their desk.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/bhive-pulse-survey.jpg" alt="Bhive pulse survey feature" />
+        <figcaption>Pulse survey tool — managers send targeted surveys to specific teams or the whole organization directly from the platform.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/bhive-help-center.png" alt="Bhive help center" />
+        <figcaption>Help center — FAQ-based support for the desktop application, reducing the burden on IT and managers.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESULTS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Results</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Testing Outcomes</h2>
+        <p>Usability testing with real call agents surfaced clear, quantifiable preferences that shaped the final design. A/B testing validated key interaction decisions before shipping.</p>
+      </div>
+    </div>
+    <div class="container cs-stats">
+      <div class="cs-stat">
+        <span class="cs-stat__number">64%</span>
+        <p>of users wanted a camera preview before enabling live feed — drove an explicit preview step</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">59%</span>
+        <p>preferred graphical status icons over alphabetic labels in A/B testing</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">2</span>
+        <p>phases shipped — status infrastructure first, avatar presence second</p>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 2.5rem;">
+      <figure class="cs-figure">
+        <img src="images/bhive-testing.png" alt="Usability testing results and findings" />
+        <figcaption>Usability testing results — quantitative preference data that directly shaped interaction decisions.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/bhive-icons.png" alt="A/B test comparing status icons vs. alphabetic labels" />
+        <figcaption>A/B test — graphical status icons (left) vs. alphabetic labels (right). Icons won 59% to 41%.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/bhive-dark-mode.png" alt="Dark mode implementation" />
+        <figcaption>Dark mode — implemented based on user feedback during testing, improving comfort for long on-screen shifts.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- REFLECTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Reflection</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">What I Learned</h2>
+        <p>This project taught me that privacy isn't just a compliance checkbox — it's a design constraint that shapes the entire solution. The avatar system only emerged because we listened when users said they didn't want to be on camera. Had we pushed through with live video, adoption would have stalled at the feature level, not the UX level.</p>
+        <p>I also learned the value of phased delivery. Shipping status and timesheets first gave us a working product while we solved the harder avatar and virtual office problems. Stakeholders had something in their hands while the more ambitious phase was being designed and tested.</p>
+        <p>One design decision I'd revisit: I broke the auto-save convention for camera settings and added an explicit "Save change" button so users could preview before going live. It was the right call for this context, but worth flagging as a conscious departure from platform norms rather than an oversight.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <section class="cs-next">
+    <div class="container cs-next__inner">
+      <p class="section-label">Next Project</p>
+      <h2>Driver App: Pickup Return</h2>
+      <a href="driver-app-pickup-return.html" class="btn btn--primary">View Project &rarr;</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">David Lee</span>
+        <p>Product designer bridging pragmatic design to emotional connection. Based in the US.</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="about.html">About</a>
+        <a href="index.html#work">UI/UX</a>
+        <a href="index.html#work">Industrial Design</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="footer__socials">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Twitter</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 David Lee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
