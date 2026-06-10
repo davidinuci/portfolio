@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safe &amp; Sound — David Lee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <script src="auth.js"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5YFQMYE4YG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5YFQMYE4YG');
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">David Lee</a>
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#work">UI/UX</a></li>
+        <li><a href="index.html#work">Industrial Design</a></li>
+        <li><a href="#" target="_blank">Resume</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Contact</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CASE STUDY HERO -->
+  <section class="cs-hero">
+    <div class="container cs-hero__inner">
+      <a href="index.html#work" class="cs-back">&larr; Back to Projects</a>
+      <span class="project-card__tag">UX Design</span>
+      <h1 class="cs-hero__title">Safe &amp; Sound</h1>
+      <p class="cs-hero__sub">A drive-in music festival experience designed for the pandemic era — combining safety measures, mobile ticketing, drone food delivery, and social features so attendees could enjoy live music without compromising their health.</p>
+      <div class="cs-meta">
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Role</span>
+          <span class="cs-meta__value">UX Designer</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Timeline</span>
+          <span class="cs-meta__value">1 Month · 2021</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Platform</span>
+          <span class="cs-meta__value">Mobile App + Website</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Tools</span>
+          <span class="cs-meta__value">Figma, Miro, HTML/CSS/JS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="cs-cover">
+    <div class="cs-cover__img cs-cover__img--safe-sound"></div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Overview</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Challenge</h2>
+        <p>By 2021, people were deeply fatigued by COVID restrictions and had exhausted their at-home entertainment options. They wanted to go out — to feel the energy of a live event — but remained genuinely concerned about their health. Existing event formats couldn't reconcile these two needs.</p>
+        <p>The challenge was to design a drive-in music festival experience with a companion app and website that made safety measures feel enabling, not limiting. The product needed to convince hesitant attendees that they could have a genuinely good time while staying safe.</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 2.5rem;">
+      <img src="images/ss-mobile-map.jpg" alt="Safe & Sound mobile app — map view showing designated parking areas" style="width:100%; border-radius:10px; border:1px solid #ebebeb;" />
+      <p style="font-size:0.8rem; color:#888; margin-top:0.75rem;">Mobile app map view — designated parking areas with distance spacing and nearby attendee discovery.</p>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESEARCH -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Research</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Understanding the Audience</h2>
+        <p>The research phase combined a proto-persona, online surveys, and six one-on-one interviews with users matching the target demographic — primarily adults aged 22–30 who were socially active before the pandemic. Key findings:</p>
+        <ul class="cs-list">
+          <li>Over 33% of respondents said they missed fun activities more than anything else during COVID restrictions.</li>
+          <li>48% wanted events held inside vehicles or fenced areas to maintain clear physical separation between groups.</li>
+          <li>67% preferred to view ticket information on desktop or laptop before purchasing.</li>
+          <li>Vaccination incentives — fast-lane entry, discounts — were seen as fair and motivating, not coercive.</li>
+        </ul>
+        <div class="cs-callout">
+          <p>"People are generally tired of COVID restrictions and have exhausted all of their at-home entertainment options. While they are still very concerned about their health and safety, they are searching for a safe, engaging, smoothly run event."</p>
+          <span>— Research synthesis from surveys and user interviews</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 2.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ss-persona.jpg" alt="Proto-persona: Zane Hassel" />
+        <figcaption>Proto-persona — Zane Hassel, 25, representing the target demographic of COVID-fatigued social attendees.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ss-survey-1.jpg" alt="Survey results part 1" />
+        <figcaption>Survey responses — demographic breakdown and top pandemic frustrations.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ss-survey-2.jpg" alt="Survey results part 2" />
+        <figcaption>Survey data — event format preferences and safety measure priorities.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem;">
+      <figure class="cs-figure">
+        <img src="images/ss-interviews.jpg" alt="Interview findings" />
+        <figcaption>Interview findings — pain points grouped by theme: safety, social connection, and event experience.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ss-affinity.jpg" alt="Affinity diagram" />
+        <figcaption>Affinity diagram — research insights clustered around ideal experience, safety, frustrations, and motivations.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ss-empathy-map.jpg" alt="Empathy map" />
+        <figcaption>Empathy map — what users think, feel, say, and do when considering a pandemic-era event.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem;">
+      <figure class="cs-figure">
+        <img src="images/ss-competitor.jpg" alt="Competitor analysis" />
+        <figcaption>Competitor analysis — existing drive-in and outdoor event formats evaluated for safety, social features, and logistics.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- PROCESS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Process</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">From Idea to Prototype</h2>
+        <p>The ideation phase used "I like, I wish, what if" brainstorming followed by a prioritization matrix to narrow the feature set. A clear design language emerged: electric and exciting with retro nightlife elements, reinforcing that safety measures enhance rather than diminish the festival vibe.</p>
+        <ul class="cs-list">
+          <li><strong>Brainstorming</strong> — generated a wide feature set around parking, food, social interaction, and safety screening.</li>
+          <li><strong>Prioritization</strong> — mapped features against feasibility and user value to identify the MVP for prototyping.</li>
+          <li><strong>Style guide</strong> — defined the visual language before wireframing to keep the high-energy aesthetic consistent.</li>
+          <li><strong>Storyboard &amp; task flows</strong> — mapped the full attendee journey from ticket purchase through food ordering and social interaction at the event.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ss-brainstorm.jpg" alt="Brainstorming session results" />
+        <figcaption>"I like, I wish, what if" brainstorm — features generated across parking, food, social, and safety categories.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ss-prioritization.jpg" alt="Feature prioritization matrix" />
+        <figcaption>Prioritization matrix — features ranked by user value and feasibility to define the MVP scope.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ss-style-guide.jpg" alt="Visual style guide" />
+        <figcaption>Style guide — electric, retro nightlife aesthetic communicating energy and excitement.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ss-storyboard.jpg" alt="User journey storyboard" />
+        <figcaption>Storyboard — full attendee journey from arriving at the venue to ordering food and chatting with nearby groups.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ss-task-flow.jpg" alt="Food ordering task flow" />
+        <figcaption>Task flow — food ordering and drone delivery process mapped before wireframing.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ss-lofi.jpg" alt="Low-fidelity wireframes" />
+        <figcaption>Low-fidelity wireframes — initial screens for the mobile app tested before moving to high-fidelity.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- SOLUTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Solution</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Final Design</h2>
+        <p>Safe &amp; Sound ships as a mobile app for in-event use and a desktop website for pre-event ticket browsing and purchasing. The two products cover the complete attendee journey from discovery to departure.</p>
+      </div>
+    </div>
+    <div class="container cs-features">
+      <div class="cs-feature">
+        <div class="cs-feature__number">01</div>
+        <h3>QR E-Tickets</h3>
+        <p>Contactless QR code tickets include vaccination record verification. Vaccinated attendees access a fast lane, turning a safety measure into a perk that encourages health compliance.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">02</div>
+        <h3>Venue Map &amp; Parking</h3>
+        <p>An interactive map shows designated parking zones with enforced spacing between groups. Attendees can see nearby groups on the map and initiate contact — social connection without physical crowding.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">03</div>
+        <h3>Drone Food Delivery</h3>
+        <p>Food and drinks are ordered in-app and delivered by drone directly to each vehicle — eliminating queues and contact points that represented the highest safety risk at live events.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">04</div>
+        <h3>Group Chat &amp; Sharing</h3>
+        <p>Attendees can message nearby groups, share food orders, and coordinate meetups through the in-app chat — maintaining the social energy of a festival within a safely distanced environment.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">05</div>
+        <h3>Desktop Ticketing</h3>
+        <p>The desktop website serves as the primary pre-event destination — event details, ticket tiers, FAQ, and directions — matching the 67% of users who preferred desktop for ticket research.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">06</div>
+        <h3>Coded Prototype</h3>
+        <p>Key flows were built as a partial coded prototype in HTML/CSS/JS — enabling more realistic usability testing than a static Figma prototype, particularly for animation and micro-interaction feedback.</p>
+      </div>
+    </div>
+
+    <div class="container cs-final-images">
+      <!-- Mobile screens — 3-up at phone width -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; align-items: start;">
+        <figure class="cs-figure cs-figure--mobile" style="align-items: center;">
+          <img src="images/ss-ticket.gif" alt="QR e-ticket flow" />
+          <figcaption>E-ticket flow — QR code generation with vaccination verification and fast-lane access.</figcaption>
+        </figure>
+        <figure class="cs-figure cs-figure--mobile" style="align-items: center;">
+          <img src="images/ss-food.gif" alt="Food ordering and drone delivery flow" />
+          <figcaption>Food ordering — item selection, quantity confirmation, and drone delivery tracking.</figcaption>
+        </figure>
+        <figure class="cs-figure cs-figure--mobile" style="align-items: center;">
+          <img src="images/ss-chat.gif" alt="Chat and food sharing flow" />
+          <figcaption>Chat &amp; sharing — messaging nearby groups and splitting food orders between vehicles.</figcaption>
+        </figure>
+      </div>
+      <!-- Desktop screens — full width -->
+      <figure class="cs-figure">
+        <img src="images/ss-desktop.jpg" alt="Desktop website interface" />
+        <figcaption>Desktop website — event information, ticket tiers, and purchase flow optimized for pre-event browsing.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ss-ticket-desktop.gif" alt="Desktop ticket purchasing flow" />
+        <figcaption>Desktop ticket flow — selecting seats, entering vaccination details, and completing checkout.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESULTS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Testing</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Iteration &amp; Refinement</h2>
+        <p>Usability testing uncovered five specific changes that improved clarity and reduced friction across the food ordering, social, and check-in flows. Each iteration was driven by a concrete user observation, not assumption.</p>
+      </div>
+    </div>
+    <div class="container cs-stats">
+      <div class="cs-stat">
+        <span class="cs-stat__number">80%</span>
+        <p>of survey respondents were aged 22–30 — the primary target demographic</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">5</span>
+        <p>usability-driven iterations shipped after testing</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">67%</span>
+        <p>preferred desktop for viewing ticket information — drove the full desktop website</p>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 2.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ss-iter-username.jpg" alt="Iteration: added username to food order confirmation" />
+        <figcaption>Iteration 1 — added recipient username to food order confirmation so groups sharing orders knew whose item was whose.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ss-iter-status.jpg" alt="Iteration: online/offline status indicators" />
+        <figcaption>Iteration 2 — added online/offline status indicators so users could see who was active before messaging.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ss-iter-profile.jpg" alt="Iteration: user profile screen" />
+        <figcaption>Iteration 3 — redesigned the user profile screen based on testing feedback about information hierarchy.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <figure class="cs-figure">
+        <img src="images/ss-iter-food-btn.jpg" alt="Iteration: Food/Drink button label" />
+        <figcaption>Iteration 4 — relabeled "Food" to "Food/Drink" when ordering for another user to reduce confusion.</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="images/ss-redesign-food.jpg" alt="Redesigned food ordering process" />
+        <figcaption>Iteration 5 — restructured food ordering to item selection first, then quantity — matching users' natural mental model.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- REFLECTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Reflection</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">What I Learned</h2>
+        <p>This project reinforced that constraints can be features. Every COVID safety requirement — vehicle parking, contactless tickets, drone delivery — became a design opportunity to differentiate the experience. Reframing restrictions as novelties shifted the product narrative from "a concert you have to attend carefully" to "a new kind of festival."</p>
+        <p>The coded prototype was worth the extra time. Animating the ticket QR code and food ordering flow in real HTML revealed transition issues that a Figma prototype would have hidden — and gave testing participants a much more authentic reaction to the final product.</p>
+        <p>If I continued this project, I'd explore a live news feed of festival posts to encourage organic socializing between nearby groups, and reach out to existing drive-in event operators to validate the operational feasibility of the drone delivery concept.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <section class="cs-next">
+    <div class="container cs-next__inner">
+      <p class="section-label">Next Project</p>
+      <h2>Non-Profit Website Redesign</h2>
+      <a href="much-love.html" class="btn btn--primary">View Project &rarr;</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">David Lee</span>
+        <p>Product designer bridging pragmatic design to emotional connection. Based in the US.</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="about.html">About</a>
+        <a href="index.html#work">UI/UX</a>
+        <a href="index.html#work">Industrial Design</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="footer__socials">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Twitter</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 David Lee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

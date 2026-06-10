@@ -99,6 +99,22 @@
   background-color: #daf0e3;
 }
 
+.cs-cover__img--bhive {
+  background-image: url('images/bhive-cover.jpg');
+}
+
+.cs-cover__img--safe-sound {
+  background-image: url('images/ss-cover.jpg');
+}
+
+.cs-cover__img--much-love {
+  background-image: url('images/ml-cover.jpg');
+}
+
+.cs-cover__img--edisonfuture {
+  background-image: url('images/ef-cover.jpg');
+}
+
 .cs-img-block--driver-hifi {
   background-color: #daf0e3;
 }
