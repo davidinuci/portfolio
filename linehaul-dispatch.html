@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linehaul Dispatch — David Lee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <script src="auth.js"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5YFQMYE4YG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5YFQMYE4YG');
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">David Lee</a>
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#work">UI/UX</a></li>
+        <li><a href="index.html#work">Industrial Design</a></li>
+        <li><a href="#" target="_blank">Resume</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Contact</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CASE STUDY HERO -->
+  <section class="cs-hero">
+    <div class="container cs-hero__inner">
+      <a href="index.html#work" class="cs-back">&larr; Back to Projects</a>
+      <span class="project-card__tag">Product Design</span>
+      <h1 class="cs-hero__title">Linehaul Dispatch</h1>
+      <p class="cs-hero__sub">Replacing spreadsheets and Slack threads with a single dispatch interface — giving Jitsu coordinators a live view of every linehaul departure, driver assignment, and manifest status across the long-haul network.</p>
+      <div class="cs-meta">
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Role</span>
+          <span class="cs-meta__value">Lead Product Designer</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Timeline</span>
+          <span class="cs-meta__value">3 Months</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Platform</span>
+          <span class="cs-meta__value">Web (Desktop)</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Tools</span>
+          <span class="cs-meta__value">Figma, FigJam</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="cs-cover">
+    <div class="cs-cover__img cs-cover__img--linehaul"></div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Overview</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Challenge</h2>
+        <p>Jitsu's linehaul operations connect sorting hubs across the long-haul network — dozens of trailers departing each day on staggered schedules, each leg carrying parcels that feed the next facility's inbound sort. When a departure slips, the ripple runs downstream for hours. But the tools coordinators relied on to prevent that weren't built for the job: a mix of spreadsheets, a shared Slack channel, and manual calls to the floor to confirm loading status.</p>
+        <p>Dispatchers had no single view of departure readiness. Driver availability, trailer loading status, and manifest counts lived in separate systems. Shift handoffs were the highest-risk moment of the day — the outgoing dispatcher's context existed only in their head or in a personal notes doc. The goal was to design a dispatch interface that unified these signals into one surface and let coordinators act on what they saw without jumping between tools.</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 2.5rem;">
+      <div class="cs-img-block" style="background-color: #f5f5f5; border: 1px dashed #ddd;">
+        <p class="cs-img-block__caption">The existing workflow — a Google Sheet tracking departure times, a Slack channel for driver check-ins, and no live loading status. Coordinators had to stitch together the picture manually before each departure window. [Image coming soon]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESEARCH -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Research</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Understanding the Users</h2>
+        <p>I shadowed dispatchers across two full shifts at Jitsu's primary hub — a morning peak and an afternoon overlap window — and conducted follow-up interviews with four dispatchers and two shift leads. The patterns that emerged fell into three categories:</p>
+        <ul class="cs-list">
+          <li>Dispatchers were context-switching between 3–4 tabs at any given time: a spreadsheet, the TMS, Slack, and a separate driver roster. None of them reflected each other in real time, so discrepancies were only caught when something went wrong.</li>
+          <li>Driver check-in was entirely verbal — a driver would show up, tell the dispatcher they were ready, and the dispatcher would manually update the sheet. There was no digital record until the driver was already on the road.</li>
+          <li>Manifest discrepancies — cases where the parcel count on the load didn't match what the TMS expected — had no standardized escalation path. Dispatchers resolved them ad hoc, usually by calling the sort floor directly.</li>
+          <li>Shift handoffs were disproportionately high-risk. The incoming dispatcher had no reliable source of truth for which legs were on track and which were at risk — they relied entirely on the verbal briefing from the outgoing coordinator.</li>
+        </ul>
+        <div class="cs-callout">
+          <p>"I'm basically running a mental map of every trailer and every driver in my head at once. The sheet tells me the plan — but the actual state of everything? That's just me knowing."</p>
+          <span>— Linehaul Dispatcher, Contextual Interview</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE: RESEARCH -->
+  <div class="container">
+    <div class="cs-img-block cs-img-block--research">
+      <p class="cs-img-block__caption">Affinity map from dispatcher and shift lead interviews — pain points clustered into four themes: departure visibility, driver check-in, manifest integrity, and shift handoff. [Image coming soon]</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- PROCESS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Process</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">From Wireframes to High-Fidelity</h2>
+        <p>The core design challenge was the view model: dispatchers needed to see the full picture at a glance and take targeted action without navigating away from it. I prototyped three distinct approaches before landing on the final structure.</p>
+        <ul class="cs-list">
+          <li><strong>Round 1</strong> — A chronological list sorted by departure time. Dispatchers responded well to the time-ordering but immediately tried to group by status — "I don't need to see a leg that already departed, I need to see what's about to miss its window." A flat time-sorted list buried the most urgent information.</li>
+          <li><strong>Round 2</strong> — A status-lane board (Unassigned → Loading → Ready → Departed) inspired by a Kanban model. This surfaced urgency better, but dispatchers lost the time dimension — two legs in the same "Ready" lane had very different urgency depending on their departure windows. They needed both status and time visible simultaneously.</li>
+          <li><strong>Round 3</strong> — A hybrid: status-grouped rows with departure time prominently displayed on each card, and a color-coded urgency indicator (green / amber / red) derived from time-to-departure. Dispatchers could scan for at-risk legs instantly. Inline quick-actions on each card — Assign Driver, Confirm Manifest, Mark Departed — meant the most common tasks required zero navigation.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE: LO-FI -->
+  <div class="container cs-final-images">
+    <div class="cs-img-block" style="background-color: #f5f5f5; border: 1px dashed #ddd;">
+      <p class="cs-img-block__caption">Lo-fi wireframes — three view model explorations: chronological list, status-lane board, and the hybrid status-with-time approach. Tested with dispatchers during live shifts. [Image coming soon]</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- SOLUTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Solution</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">The Final Design</h2>
+        <p>The Linehaul Dispatch interface is built around a single live board that reflects the real-time state of every departure in the current window. Each departure leg is a card — self-contained, actionable, and always showing the next thing a dispatcher needs to do.</p>
+      </div>
+    </div>
+    <div class="container cs-features">
+      <div class="cs-feature">
+        <div class="cs-feature__number">01</div>
+        <h3>Live Departure Board</h3>
+        <p>All active legs are visible in a single scrollable board, grouped by status and color-coded by time urgency. At a glance, dispatchers see which legs are on track, which need a driver assigned, and which are approaching their departure window without a confirmed manifest. No tab-switching, no mental model required.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">02</div>
+        <h3>Driver Assignment &amp; Digital Check-In</h3>
+        <p>Dispatchers assign drivers to legs directly from the board — searching by name or ID, with availability status shown inline. When a driver arrives on site, check-in is logged through the dispatch interface, creating a timestamped record that persists through shift handoffs. No more verbal-only check-ins with nothing to show for it.</p>
+      </div>
+      <div class="cs-feature">
+        <div class="cs-feature__number">03</div>
+        <h3>Manifest Confirmation &amp; Discrepancy Handling</h3>
+        <p>Before a leg can be marked Ready, the dispatcher confirms the parcel count matches the TMS manifest. If there's a discrepancy, an inline escalation flow captures the details and notifies the sort floor — without pulling the dispatcher out of the board view. The leg stays in a flagged state until resolved, preventing unmarked departures from slipping through.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE: HI-FI -->
+  <div class="container cs-final-images">
+    <div class="cs-img-block" style="background-color: #e4ecf7; border: 1px dashed #b0c4de;">
+      <p class="cs-img-block__caption">High-fidelity screens — live departure board with status grouping and urgency color coding, driver assignment modal, and manifest confirmation flow with discrepancy escalation path. [Image coming soon]</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- EDGE CASES -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Edge Cases</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Late Trailers &amp; Unassigned Departures</h2>
+        <p>Two edge cases required explicit design attention — both are high-stakes enough that a generic error state wasn't acceptable:</p>
+        <ul class="cs-list">
+          <li><strong>Late trailer detection</strong> — When a trailer hasn't reached a "loading complete" status within the expected window, the departure card escalates to a red urgency state and surfaces a "Trailer not ready" flag with a direct link to the loading floor status. Dispatchers see this without having to poll the floor themselves.</li>
+          <li><strong>Unassigned legs at T-30</strong> — If a departure is 30 minutes from its window and no driver has been assigned, the board surfaces an alert banner at the top of the unassigned group. This gives dispatchers a proactive signal before the window is missed, not after. The alert resolves automatically once a driver is assigned.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE: EDGE CASES -->
+  <div class="container">
+    <div class="cs-img-block" style="background-color: #fff3f0; border: 1px dashed #e0c8c5;">
+      <p class="cs-img-block__caption">Edge case flows — late trailer flag on the departure card, and the T-30 unassigned departure alert banner with one-click driver search. [Image coming soon]</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- RESULTS -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Results</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">Impact</h2>
+        <p>The Linehaul Dispatch tool rolled out across Jitsu's primary hub over an 8-week pilot period. Results measured against the spreadsheet baseline:</p>
+      </div>
+    </div>
+    <div class="container cs-stats">
+      <div class="cs-stat">
+        <span class="cs-stat__number">40%</span>
+        <p>Reduction in missed departure windows during the pilot period</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">0</span>
+        <p>Untracked departures after launch, versus ~12 per week in the spreadsheet era</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat__number">3 days</span>
+        <p>New dispatcher onboarding time, down from two weeks with the old toolset</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="cs-divider"></div>
+
+  <!-- REFLECTION -->
+  <section class="cs-section">
+    <div class="container cs-two-col">
+      <div class="cs-two-col__sidebar">
+        <p class="section-label">Reflection</p>
+      </div>
+      <div class="cs-two-col__body">
+        <h2 class="cs-section__title">What I Learned</h2>
+        <p>The most important design decision in this project wasn't a feature — it was the framing of the departure card as a task unit rather than a data row. Dispatchers didn't want a dashboard to observe; they wanted a surface to work from. Every card needed to tell them what state a leg was in and what the next action was, with no navigation required. Collapsing the view-and-act loop into a single card was what made the interface feel manageable rather than overwhelming.</p>
+        <p>If I were to extend this, I'd explore a dispatcher-to-floor messaging channel built directly into the manifest discrepancy flow — right now that escalation still exits to Slack. I'd also invest in a shift handoff summary view that captures the state of every in-progress leg at a given timestamp, so the incoming dispatcher can orient in under a minute without a verbal briefing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <section class="cs-next">
+    <div class="container cs-next__inner">
+      <p class="section-label">Next Project</p>
+      <h2>Outbound App</h2>
+      <a href="outbound-app.html" class="btn btn--primary">View Project &rarr;</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">David Lee</span>
+        <p>Product designer bridging pragmatic design to emotional connection. Based in the US.</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="about.html">About</a>
+        <a href="index.html#work">UI/UX</a>
+        <a href="index.html#work">Industrial Design</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="footer__socials">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Twitter</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 David Lee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

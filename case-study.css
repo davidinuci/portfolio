@@ -115,6 +115,10 @@
   background-image: url('images/ef-cover.jpg');
 }
 
+.cs-cover__img--linehaul {
+  background-color: #0d2137;
+}
+
 .cs-img-block--driver-hifi {
   background-color: #daf0e3;
 }
