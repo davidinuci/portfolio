@@ -81,6 +81,7 @@
         <h2 class="cs-section__title">The Challenge</h2>
         <p>As Jitsu grew from its Axlehire roots, multiple products were being designed simultaneously with no shared design language. Components were duplicated across files, color values were hardcoded at the component level, and every product had its own slightly different version of the same button. At the same time, the company was going through a full rebrand.</p>
         <p>Without a proper system in place, that rebrand would mean manually hunting through every fill in every product file. The challenge was to build a system robust enough to absorb a company identity change — and flexible enough to give each product its own visual character within a shared foundation.</p>
+        <p>I was building this system from scratch while still carrying my full workload across other product projects, with no additional headcount to help. The other designer on the team was junior and had no prior exposure to design systems, so part of this effort included mentoring her so she could help maintain the system going forward.</p>
       </div>
     </div>
     <div class="container" style="margin-top: 2.5rem;">
@@ -138,11 +139,136 @@
     </div>
   </section>
 
-  <!-- WIREFRAMES / TOKEN DIAGRAM -->
+  <!-- DESIGN SYSTEM POSTER -->
   <div class="container">
-    <div class="cs-img-block cs-img-block--wireframes">
-      <p class="cs-img-block__caption">Figma Variables panel — JU collection with 139 semantic tokens across 8 groups, all referencing the Primitives collection of 279 raw tonal values.</p>
+    <div class="ds-poster">
+      <div class="ds-poster__header">
+        <p class="ds-poster__eyebrow">JU Token Collection — Light Mode</p>
+        <h3 class="ds-poster__title">Jitsu Design System</h3>
+      </div>
+
+      <div class="ds-poster__block">
+        <p class="ds-poster__section-label">Color</p>
+        <div class="ds-swatches">
+          <div class="ds-swatch">
+            <div class="ds-swatch__color" style="background:#297a48;"></div>
+            <div class="ds-swatch__label">
+              <span class="ds-swatch__name">Primary</span>
+              <span class="ds-swatch__hex">#297A48</span>
+            </div>
+          </div>
+          <div class="ds-swatch">
+            <div class="ds-swatch__color" style="background:#b2f1c0;"></div>
+            <div class="ds-swatch__label">
+              <span class="ds-swatch__name">Primary Container</span>
+              <span class="ds-swatch__hex">#B2F1C0</span>
+            </div>
+          </div>
+          <div class="ds-swatch">
+            <div class="ds-swatch__color" style="background:#506353;"></div>
+            <div class="ds-swatch__label">
+              <span class="ds-swatch__name">Secondary</span>
+              <span class="ds-swatch__hex">#506353</span>
+            </div>
+          </div>
+          <div class="ds-swatch">
+            <div class="ds-swatch__color" style="background:#3a656f;"></div>
+            <div class="ds-swatch__label">
+              <span class="ds-swatch__name">Tertiary</span>
+              <span class="ds-swatch__hex">#3A656F</span>
+            </div>
+          </div>
+          <div class="ds-swatch">
+            <div class="ds-swatch__color" style="background:#bee1f6;"></div>
+            <div class="ds-swatch__label">
+              <span class="ds-swatch__name">Tertiary Container</span>
+              <span class="ds-swatch__hex">#BEE1F6</span>
+            </div>
+          </div>
+          <div class="ds-swatch">
+            <div class="ds-swatch__color" style="background:#f6fbf3;"></div>
+            <div class="ds-swatch__label">
+              <span class="ds-swatch__name">Background</span>
+              <span class="ds-swatch__hex">#F6FBF3</span>
+            </div>
+          </div>
+          <div class="ds-swatch">
+            <div class="ds-swatch__color" style="background:#48b574;"></div>
+            <div class="ds-swatch__label">
+              <span class="ds-swatch__name">Logo</span>
+              <span class="ds-swatch__hex">#48B574</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ds-poster__block">
+        <p class="ds-poster__section-label">Typography</p>
+        <div class="ds-type-scale">
+          <div class="ds-type-row">
+            <span class="ds-type-row__sample" style="font-size: 2.6rem; font-weight: 400;">Display</span>
+            <span class="ds-type-row__meta">Open Sans · Regular · 57 / 45 / 36</span>
+          </div>
+          <div class="ds-type-row">
+            <span class="ds-type-row__sample" style="font-size: 1.8rem; font-weight: 400;">Headline</span>
+            <span class="ds-type-row__meta">Open Sans · Regular · 32 / 28 / 24</span>
+          </div>
+          <div class="ds-type-row">
+            <span class="ds-type-row__sample" style="font-size: 1.35rem; font-weight: 700;">Title</span>
+            <span class="ds-type-row__meta">Open Sans · Bold · 28 – 14</span>
+          </div>
+          <div class="ds-type-row">
+            <span class="ds-type-row__sample" style="font-size: 1.05rem; font-weight: 400;">Body</span>
+            <span class="ds-type-row__meta">Open Sans · Regular · 22 – 10</span>
+          </div>
+          <div class="ds-type-row ds-type-row--label">
+            <span class="ds-type-row__sample" style="font-size: 0.95rem; font-weight: 600;">Label</span>
+            <span class="ds-type-row__meta">Roboto · Medium / SemiBold · 18 – 10</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ds-poster__block">
+        <p class="ds-poster__section-label">Components</p>
+        <div class="ds-components">
+          <div class="ds-component-card">
+            <p class="ds-component-card__label">Status</p>
+            <div class="ds-status-badge">
+              <div class="ds-status-badge__title">Status</div>
+              <div class="ds-status-badge__row">
+                <span>Update: Jan 01 2024</span>
+                <span>By: —</span>
+              </div>
+            </div>
+          </div>
+          <div class="ds-component-card">
+            <p class="ds-component-card__label">Address Card</p>
+            <div class="ds-address-card">
+              <div class="ds-address-card__text">
+                <strong>455 Cole Street</strong>
+                <span>Apt #104</span>
+                <span>San Francisco, CA 94117</span>
+              </div>
+              <div class="ds-address-card__icon"></div>
+            </div>
+          </div>
+          <div class="ds-component-card">
+            <p class="ds-component-card__label">Stop</p>
+            <div class="ds-stop-chip">
+              <div class="ds-stop-chip__row">
+                <span class="ds-stop-chip__id">&lt;stop-#&gt;</span>
+                <span class="ds-stop-chip__pickup">Pickup</span>
+              </div>
+              <div class="ds-stop-chip__row">
+                <span class="ds-stop-chip__name">Michael Foo</span>
+                <span class="ds-stop-chip__item">Nespresso</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <p class="cs-img-block__caption">JU token collection — Light mode color roles, the Open Sans / Roboto type scale, and core components (Status, Address Card, Stop) pulled directly from the Jitsu Figma library via the Figma MCP.</p>
   </div>
 
   <!-- DIVIDER -->
@@ -181,9 +307,10 @@
 
   <!-- FINAL DESIGN IMAGE -->
   <div class="container cs-final-images">
-    <div class="cs-img-block cs-img-block--final cs-img-block--tall">
-      <p class="cs-img-block__caption">Figma Variables — JU semantic layer with Light, Dark, and AH modes. Green tonal values for Jitsu, purple for the legacy Axlehire theme.</p>
-    </div>
+    <figure class="cs-figure">
+      <img src="images/ds-variable-modes.jpg" alt="Figma Variables panel showing the JU semantic layer with Light, Dark, and AH modes" />
+      <figcaption>Figma Variables — JU semantic layer with Light, Dark, and AH modes. Green tonal values for Jitsu, purple for the legacy Axlehire theme.</figcaption>
+    </figure>
   </div>
 
   <!-- DIVIDER -->
@@ -233,7 +360,7 @@
       </div>
       <div class="cs-stat">
         <span class="cs-stat__number">0</span>
-        <p>Components manually edited during the Axlehire → Jitsu rebrand</p>
+        <p>Components manually edited during the Axlehire → Jitsu rebrand, with 0 dedicated headcount during the build</p>
       </div>
     </div>
   </section>
@@ -260,8 +387,8 @@
   <section class="cs-next">
     <div class="container cs-next__inner">
       <p class="section-label">Next Project</p>
-      <h2>Outbound App</h2>
-      <a href="outbound-app.html" class="btn btn--primary">View Project &rarr;</a>
+      <h2>Warehouse Dashboard</h2>
+      <a href="warehouse-dashboard.html" class="btn btn--primary">View Project &rarr;</a>
     </div>
   </section>
 

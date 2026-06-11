@@ -85,10 +85,13 @@
 
 .cs-cover__img--warehouse {
   background-color: #d4f7f0;
+  background-image: url('images/wd-cover.png');
 }
 
 .cs-cover__img--outbound {
   background-color: #fef3e2;
+  background-image: url('images/oa-cover.png');
+  background-position: center 60%;
 }
 
 .cs-cover__img--design-system {
@@ -97,6 +100,8 @@
 
 .cs-cover__img--driver {
   background-color: #daf0e3;
+  background-image: url('images/dapr-cover.png');
+  background-position: center 90%;
 }
 
 .cs-cover__img--bhive {
@@ -120,7 +125,7 @@
 }
 
 .cs-img-block--driver-hifi {
-  background-color: #daf0e3;
+  background-color: #f5f5f5;
 }
 
 /* Sections */
@@ -227,15 +232,251 @@
   height: 520px;
 }
 
-.cs-img-block--research  { background-color: #eef3fb; }
-.cs-img-block--wireframes { background-color: #f5f0fb; }
-.cs-img-block--final      { background-color: #d4f7f0; }
+.cs-img-block--research  { background-color: #f5f5f5; }
+.cs-img-block--wireframes { background-color: #f5f5f5; }
+.cs-img-block--final      { background-color: #f5f5f5; }
+
+.cs-img-frame {
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.cs-img-frame .cs-figure {
+  margin: 0;
+}
+
+.cs-img-frame--research   { background-color: #f5f5f5; }
+.cs-img-frame--wireframes { background-color: #f5f5f5; }
 
 .cs-img-block__caption {
   font-size: 0.8rem;
   color: #888;
   margin-top: 0.5rem;
   margin-bottom: 2rem;
+}
+
+/* Design System Poster */
+.ds-poster {
+  background: linear-gradient(135deg, #1f5c38 0%, #297a48 45%, #3a656f 100%);
+  border-radius: 16px;
+  padding: 3rem;
+  color: #fff;
+}
+
+.ds-poster__header {
+  margin-bottom: 2.5rem;
+}
+
+.ds-poster__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.ds-poster__title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+.ds-poster__section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.65;
+  margin-bottom: 1rem;
+}
+
+.ds-poster__block + .ds-poster__block {
+  margin-top: 2.5rem;
+}
+
+.ds-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.ds-swatch {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ds-swatch__color {
+  height: 70px;
+}
+
+.ds-swatch__label {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.6rem 0.75rem;
+}
+
+.ds-swatch__name {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.ds-swatch__hex {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-top: 0.15rem;
+  font-family: monospace;
+}
+
+.ds-type-scale {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.ds-type-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 1.1rem;
+}
+
+.ds-type-row__sample {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.ds-type-row__meta {
+  font-size: 0.75rem;
+  opacity: 0.65;
+  font-family: monospace;
+  white-space: nowrap;
+}
+
+.ds-type-row--label .ds-type-row__sample {
+  font-family: 'Roboto', sans-serif;
+}
+
+.ds-components {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.ds-component-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  color: #1a1a1a;
+}
+
+.ds-component-card__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 0.85rem;
+}
+
+.ds-status-badge {
+  background: #297a48;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.ds-status-badge__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.ds-status-badge__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.ds-address-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ds-address-card__text strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+
+.ds-address-card__text span {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.2rem;
+}
+
+.ds-address-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #b2f1c0, #bee1f6);
+  flex-shrink: 0;
+}
+
+.ds-stop-chip {
+  border: 2px solid #297a48;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+}
+
+.ds-stop-chip__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ds-stop-chip__row + .ds-stop-chip__row {
+  margin-top: 0.4rem;
+}
+
+.ds-stop-chip__id {
+  font-style: italic;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.ds-stop-chip__pickup {
+  background: #b2f1c0;
+  color: #1f5c38;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+}
+
+.ds-stop-chip__name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.ds-stop-chip__item {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+@media (max-width: 640px) {
+  .ds-poster {
+    padding: 1.75rem;
+  }
 }
 
 /* Feature cards */
@@ -329,6 +570,7 @@
   flex-direction: column;
   gap: 2rem;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .cs-figure {
@@ -352,6 +594,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.cs-figure--mobile.cs-figure--centered {
+  align-items: center;
 }
 
 .cs-figure--mobile img {
