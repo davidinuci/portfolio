@@ -122,6 +122,9 @@
 
 .cs-cover__img--linehaul {
   background-color: #0d2137;
+  background-image: url('images/lh-dispatch-detail.png');
+  background-size: cover;
+  background-position: center top;
 }
 
 .cs-img-block--driver-hifi {
