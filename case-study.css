@@ -124,7 +124,7 @@
   background-color: #0d2137;
   background-image: url('images/ld-cover.png');
   background-size: cover;
-  background-position: center top;
+  background-position: center 55%;
 }
 
 .cs-img-block--driver-hifi {
