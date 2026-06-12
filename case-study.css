@@ -593,6 +593,12 @@
   margin-top: 0.75rem;
 }
 
+.cs-img-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
 .cs-figure--mobile {
   display: flex;
   flex-direction: column;
