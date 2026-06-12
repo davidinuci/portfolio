@@ -596,7 +596,19 @@
 .cs-img-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cs-img-row .cs-figure--mobile {
+  flex: 1 1 0;
+  min-width: 0;
+  align-items: center;
+}
+
+.cs-img-row .cs-figure--mobile img {
+  width: 100%;
+  max-width: 300px;
 }
 
 .cs-figure--mobile {
