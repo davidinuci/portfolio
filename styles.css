@@ -405,7 +405,7 @@ h1, h2, h3 {
 .project-card__img--6 { background-color: #0F1F12; background-image: url('images/card-outbound-app.png'); background-size: 125%; background-position: center center; background-repeat: no-repeat; }
 .project-card__img--7 { background-color: #daf0e3; background-image: url('images/card-driver-pickup-return.png'); background-size: cover; background-repeat: no-repeat; background-position: center center; }
 .project-card__img--8 { background-color: #e8f5e9; background-image: url('images/card-design-system.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center; }
-.project-card__img--9 { background-color: #0d2137; }
+.project-card__img--9 { background-color: #0d2137; background-image: url('images/card-Linehaul-Dispatch.png'); background-size: cover; background-repeat: no-repeat; background-position: center center; }
 
 .project-card__body {
   padding: 1.75rem;
