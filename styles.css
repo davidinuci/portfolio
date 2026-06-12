@@ -404,8 +404,8 @@ h1, h2, h3 {
 .project-card__img--5 { background-color: #d4f7f0; background-image: url('images/card-warehouse-dashboard.png'); background-size: 120%; background-repeat: no-repeat; background-position: 70% center; }
 .project-card__img--6 { background-color: #0F1F12; background-image: url('images/card-outbound-app.png'); background-size: 125%; background-position: center center; background-repeat: no-repeat; }
 .project-card__img--7 { background-color: #daf0e3; background-image: url('images/card-driver-pickup-return.png'); background-size: cover; background-repeat: no-repeat; background-position: center center; }
-.project-card__img--8 { background-color: #e8f5e9; background-image: url('images/card-design-system.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center; }
-.project-card__img--9 { background-color: #0d2137; background-image: url('images/card-Linehaul-Dispatch.png'); background-size: cover; background-repeat: no-repeat; background-position: center center; }
+.project-card__img--8 { background-color: #e8f5e9; background-image: url('images/card-design-system-rebrand.png'); background-size: cover; background-repeat: no-repeat; background-position: center 20%; }
+.project-card__img--9 { background-color: #0d2137; background-image: url('images/card-Linehaul-Dispatch.png'); background-size: 140%; background-repeat: no-repeat; background-position: 0% 55%; }
 
 .project-card__body {
   padding: 1.75rem;
